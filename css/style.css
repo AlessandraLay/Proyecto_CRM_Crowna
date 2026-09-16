@@ -1,0 +1,2302 @@
+/* =========================================================
+   ESTILO GENERAL - TODAS LAS PÁGINAS
+   ========================================================= */
+
+/* General */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #11194D;
+    background-color: #F7F7FF;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E8E8F5;
+}
+
+/* Menú (Vista móvil) */
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 20px;
+}
+
+.menu img {
+    display: block;
+
+    width: 95px;
+    height: auto;
+}
+
+
+/* Botón Menú (Vista móvil) */
+
+.menu-toggle {
+    display: block;
+
+    padding: 5px;
+
+    color: #11194D;
+    background-color: transparent;
+
+    border: none;
+
+    font-size: 23px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* Navegación (Vista móvil) */
+
+nav {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 14px;
+
+    list-style: none;
+}
+
+nav a {
+    color: #11194D;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #5638F5;
+}
+
+
+/* Botón Demo (Vista móvil) */
+
+.boton-demo {
+    display: none;
+
+    padding: 14px 22px;
+
+    color: #FFFFFF;
+    background-color: #5638F5;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.boton-demo:hover {
+    background-color: #4528D8;
+}
+
+
+/* Menú (Vista Escritorio) */
+
+@media (min-width: 1024px) {
+
+    .menu {
+        display: grid;
+
+        grid-template-columns: auto 1fr auto;
+
+        align-items: center;
+
+        gap:20px;
+
+        min-height: 85px;
+
+        padding: 10px 45px;
+    }
+
+    .menu img {
+        width: 105px;
+    }
+
+
+    /* Ocultar menú hamburguesa */
+
+    .menu-toggle {
+        display: none;
+    }
+
+
+    /* Navegación al centro */
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 20px;
+
+        justify-content: center;
+
+        list-style: none;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+
+    /* Botón a la derecha */
+
+    .boton-demo {
+        display: inline-block;
+    }
+}
+
+/* =========================================================
+   PIE DE PÁGINA - TODAS LAS PÁGINAS
+   ========================================================= */
+
+/* Pie de página (Vista Móvil) */
+
+footer {
+    padding: 30px 20px;
+
+    background-color: #FFFFFF;
+
+    border-top: 1px solid #E8E8F5;
+
+    text-align: center;
+}
+
+/* Texto General - (Vista Móvil) */
+
+footer p {
+    color: #4F5875;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Contenedor principal - (Vista Móvil) */
+
+.footer-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+}
+
+/* marca (Vista Móvil) */
+
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.footer-marca img {
+    display: block;
+
+    width: 100px;
+    height: auto;
+}
+
+
+/* copyright (Vista Móvil) */
+
+.copyright {
+    margin-top: 2px;
+}
+
+
+/* Redes sociales (Vista Móvil) */
+
+.footer-redes {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.footer-redes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-redes img {
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    object-fit: contain;
+}
+
+/* Newsletter (Vista Móvil) */
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.footer-newsletter h3 {
+    color: #11194D;
+
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.footer-newsletter form {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.footer-newsletter input {
+    width: 230px;
+
+    padding: 12px;
+
+    color: #11194D;
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.footer-newsletter input::placeholder {
+    color: #7A8199;
+}
+
+.footer-newsletter button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 44px;
+
+    color: #FFFFFF;
+    background-color: #5638F5;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: #4528D8;
+}
+
+/* Pie de página (Vista Escritorio) */
+
+@media (min-width: 1024px) {
+
+    footer {
+        padding: 35px 60px;
+
+        text-align: left;
+    }
+
+/* Contenedor (Vista Escritorio) */
+
+    .footer-contenido {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+        grid-template-areas:
+            "marca newsletter redes";
+
+        align-items: center;
+
+        gap: 50px;
+    }
+
+
+/* Marca (Vista Escritorio) */
+
+    .footer-marca {
+        grid-area: marca;
+
+        align-items: center;
+    }
+
+    .footer-marca img {
+        width: 90px;
+    }
+
+    .footer-marca p {
+        text-align: center;
+    }
+
+
+/* Newsletter (Vista Escritorio) */
+
+    .footer-newsletter {
+        grid-area: newsletter;
+
+        align-items: center;
+
+        justify-self: center;
+    }
+
+
+/* Redes sociales (Vista Escritorio) */
+
+    .footer-redes {
+        grid-area: redes;
+
+        justify-content: flex-end;
+
+        justify-self: end;
+    }
+
+    .footer-redes img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* =========================================================
+   ESTILOS EXCLUSIVOS DE INDEX.HTML
+   ========================================================= */
+
+
+/* -------------------------
+  HERO (VISTA MÓVIL)
+   ------------------------- */
+
+.hero {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "texto"
+        "indicadores"
+        "dashboard";
+
+    gap: 22px;
+
+    padding: 35px 20px 30px;
+
+    background-image: url("../crowna_assets_png/19_iniciodashboard_fondo.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Texto (vista móvil) */
+
+.hero-texto {
+    grid-area: texto;
+}
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    color: #5638F5;
+    background-color: #EAE6FF;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    margin-top: 15px;
+
+    color: #11194D;
+
+    font-size: 34px;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #5638F5;
+}
+
+.hero-texto > p:not(.etiqueta) {
+    max-width: 520px;
+
+    margin-top: 15px;
+
+    color: #4F5875;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* Botones del hero (vista móvil) */
+
+
+.botones {
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.botones .boton-principal,
+.botones .boton-secundario {
+    display: inline-block;
+
+    padding: 11px 15px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.botones .boton-principal {
+    color: #FFFFFF;
+    background-color: #5638F5;
+}
+
+.botones .boton-principal:hover {
+    background-color: #4528D8;
+}
+
+.botones .boton-secundario {
+    color: #5638F5;
+    background-color: #FFFFFF;
+
+    border: 1px solid #5638F5;
+}
+
+.botones .boton-secundario:hover {
+    background-color: #F0EDFF;
+}
+
+
+/* Indicadores (vista móvil) */
+
+
+.indicadores {
+    grid-area: indicadores;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+.indicadores article {
+    padding: 9px 5px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 9px;
+
+    text-align: center;
+}
+
+.indicadores strong {
+    display: block;
+
+    color: #5638F5;
+
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.indicadores p {
+    margin-top: 4px;
+
+    color: #4F5875;
+
+    font-size: 8px;
+    line-height: 1.3;
+}
+
+
+/* Dashboard (vista móvil) */
+
+
+.hero-dashboard {
+    grid-area: dashboard;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.hero-dashboard img {
+    display: block;
+
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+}
+
+
+/* -------------------------
+  MARCAS (VISTA MÓVIL)
+   ------------------------- */
+
+
+.marcas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 28px 20px;
+
+    background-color: #FFFFFF;
+
+    text-align: center;
+}
+
+.marcas > p {
+    color: #4F5875;
+
+    font-size: 11px;
+}
+
+.marcas-lista {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+
+    width: 100%;
+}
+
+.marcas-lista span {
+    color: #11194D;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* -------------------------
+  FUNCIONALIDADES (VISTA MÓVIL)
+   ------------------------- */
+
+
+.funcionalidades {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "intro"
+        "clientes"
+        "automatizacion"
+        "reportes"
+        "citas";
+
+    gap: 12px;
+
+    padding: 45px 20px;
+
+    background-color: #F4F4FF;
+}
+
+
+/* Funcionalidades Introducción (vista móvil) */
+
+.funcionalidades-intro {
+    grid-area: intro;
+}
+
+.funcionalidades-intro h2 {
+    margin-top: 14px;
+
+    color: #11194D;
+
+    font-size: 28px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.funcionalidades-intro > p:last-child {
+    margin-top: 14px;
+
+    color: #4F5875;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* Funcionalidades Tarjetas (vista móvil) */
+
+.funcionalidades-card-clientes_360 {
+    grid-area: clientes;
+}
+
+.funcionalidades-card-automatizacion {
+    grid-area: automatizacion;
+}
+
+.funcionalidades-card-decisiones {
+    grid-area: reportes;
+}
+
+.funcionalidades-card-citas {
+    grid-area: citas;
+}
+
+.funcionalidades-card-clientes_360,
+.funcionalidades-card-automatizacion,
+.funcionalidades-card-decisiones,
+.funcionalidades-card-citas {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 145px;
+
+    padding: 16px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 10px;
+}
+
+
+/* Funcionalidades Iconos (vista móvil) */
+
+.funcionalidades-card-clientes_360 img,
+.funcionalidades-card-automatizacion img,
+.funcionalidades-card-decisiones img,
+.funcionalidades-card-citas img {
+    display: block;
+
+    width: 35px;
+    height: 35px;
+
+    object-fit: contain;
+}
+
+
+/* Funcionalidades Títulos (vista móvil) */
+
+.funcionalidades-card-clientes_360 h3,
+.funcionalidades-card-automatizacion h3,
+.funcionalidades-card-decisiones h3,
+.funcionalidades-card-citas h3 {
+    margin-top: 10px;
+
+    color: #11194D;
+
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+
+/* Funcionalidades Textos (vista móvil) */
+
+.funcionalidades-card-clientes_360 p,
+.funcionalidades-card-automatizacion p,
+.funcionalidades-card-decisiones p,
+.funcionalidades-card-citas p {
+    margin-top: 5px;
+
+    color: #4F5875;
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+
+/* -------------------------
+  PROPUESTA DE LA EMRESA (VISTA MÓVIL)
+   ------------------------- */
+
+.empresa-propuesta {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "imagen"
+        "texto";
+
+    gap: 25px;
+
+    padding: 45px 20px;
+
+    background-color: #FFFFFF;
+}
+
+.empresa-propuesta-imagen {
+    grid-area: imagen;
+
+    display: flex;
+    justify-content: center;
+}
+
+.empresa-propuesta-imagen img {
+    display: block;
+
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+}
+
+.empresa-propuesta-texto {
+    grid-area: texto;
+}
+
+.empresa-propuesta-texto h2 {
+    margin-top: 14px;
+
+    color: #11194D;
+
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.empresa-propuesta-texto > p:not(.etiqueta) {
+    margin-top: 14px;
+
+    color: #4F5875;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.empresa-propuesta-texto ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 18px;
+    padding-left: 18px;
+
+    color: #4F5875;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.empresa-propuesta-texto .boton-secundario {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 11px 18px;
+
+    color: #5638F5;
+    background-color: #FFFFFF;
+
+    border: 1px solid #5638F5;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* -------------------------
+  CTA (VISTA MÓVIL)
+   ------------------------- */
+
+.cta {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "texto"
+        "botones";
+
+    gap: 22px;
+
+    padding: 40px 20px;
+
+    background-color: #17142F;
+}
+
+.cta article {
+    grid-area: texto;
+}
+
+.cta h2 {
+    margin-top: 14px;
+
+    color: #FFFFFF;
+
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.cta article > p:last-child {
+    margin-top: 14px;
+
+    color: #E2E0EF;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.cta-botones {
+    grid-area: botones;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.cta-botones .boton-principal {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    color: #FFFFFF;
+    background-color: #5638F5;
+
+    border: 1px solid #5638F5;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.cta-botones .boton-secundario {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    color: #FFFFFF;
+    background-color: transparent;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.cta-botones .boton-principal:hover {
+    background-color: #4528D8;
+}
+
+.cta-botones .boton-secundario:hover {
+    background-color: #2A2648;
+}
+
+
+/* -------------------------
+  VISTA DE ESCRITORIO
+   ------------------------- */
+
+@media (min-width: 1024px) {
+
+
+    /* -------------------------
+    HERO (VISTA ESCRITORIO)
+    ------------------------- */
+
+    .hero {
+        grid-template-columns: 0.85fr 1.15fr;
+
+        grid-template-rows: auto auto;
+
+        grid-template-areas:
+            "texto dashboard"
+            "indicadores dashboard";
+
+        column-gap: 45px;
+        row-gap: 25px;
+
+        min-height: 570px;
+
+        padding: 55px 70px 50px;
+    }
+
+
+    /* Texto */
+
+    .hero-texto {
+        align-self: end;
+
+        width: 100%;
+    }
+
+    .hero h1 {
+        margin-top: 20px;
+
+        font-size: 52px;
+        line-height: 1.05;
+    }
+
+    .hero-texto > p:not(.etiqueta) {
+        max-width: 600px;
+
+        margin-top: 20px;
+
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+
+    /* Botones */
+
+    .botones {
+        gap: 16px;
+
+        margin-top: 25px;
+    }
+
+    .botones .boton-principal,
+    .botones .boton-secundario {
+        padding: 14px 24px;
+
+        font-size: 14px;
+    }
+
+
+    /* Dashboard */
+
+    .hero-dashboard {
+        align-self: center;
+
+        width: 100%;
+
+        overflow: visible;
+    }
+
+    .hero-dashboard img {
+        width: 100%;
+        max-width: 650px;
+
+        margin-left: auto;
+    }
+
+
+    /* Indicadores */
+
+    .indicadores {
+        gap: 14px;
+
+        align-self: start;
+    }
+
+    .indicadores article {
+        padding: 18px 12px;
+
+        border-radius: 12px;
+    }
+
+    .indicadores strong {
+        font-size: 22px;
+    }
+
+    .indicadores p {
+        font-size: 11px;
+    }
+
+
+    /* -------------------------
+    MARCAS (VISTA ESCRITORIO)
+    ------------------------- */
+
+    .marcas {
+        gap: 24px;
+
+        padding: 38px 60px;
+    }
+
+    .marcas > p {
+        font-size: 14px;
+    }
+
+    .marcas-lista {
+        grid-template-columns: repeat(6, 1fr);
+
+        gap: 25px;
+    }
+
+    .marcas-lista span {
+        font-size: 15px;
+    }
+
+
+    /* -------------------------
+    FUNCIONALIDADES (VISTA ESCRITORIO)
+    ------------------------- */
+
+    .funcionalidades {
+        grid-template-columns: 1.05fr 1fr 1fr;
+
+        grid-template-areas:
+            "intro clientes automatizacion"
+            "intro reportes citas";
+
+        gap: 18px;
+
+        padding: 65px 60px;
+    }
+
+    .funcionalidades-intro {
+        align-self: center;
+
+        padding-right: 20px;
+    }
+
+    .funcionalidades-intro h2 {
+        font-size: 40px;
+    }
+
+    .funcionalidades-intro > p:last-child {
+        max-width: 560px;
+
+        font-size: 16px;
+    }
+
+
+    /* Tarjetas */
+
+    .funcionalidades-card-clientes_360,
+    .funcionalidades-card-automatizacion,
+    .funcionalidades-card-decisiones,
+    .funcionalidades-card-citas {
+        min-height: 190px;
+
+        padding: 25px;
+    }
+
+    .funcionalidades-card-clientes_360 img,
+    .funcionalidades-card-automatizacion img,
+    .funcionalidades-card-decisiones img,
+    .funcionalidades-card-citas img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .funcionalidades-card-clientes_360 h3,
+    .funcionalidades-card-automatizacion h3,
+    .funcionalidades-card-decisiones h3,
+    .funcionalidades-card-citas h3 {
+        margin-top: 15px;
+
+        font-size: 18px;
+    }
+
+    .funcionalidades-card-clientes_360 p,
+    .funcionalidades-card-automatizacion p,
+    .funcionalidades-card-decisiones p,
+    .funcionalidades-card-citas p {
+        font-size: 14px;
+    }
+
+
+    /* -------------------------
+    PROPUESTA DE EMPRESA (VISTA ESCRITORIO)
+    ------------------------- */
+
+    .empresa-propuesta {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "imagen texto";
+
+        gap: 60px;
+
+        padding: 75px 60px;
+    }
+
+    .empresa-propuesta-imagen {
+        align-self: center;
+    }
+
+    .empresa-propuesta-imagen img {
+        max-width: 560px;
+    }
+
+    .empresa-propuesta-texto {
+        align-self: center;
+    }
+
+    .empresa-propuesta-texto h2 {
+        font-size: 38px;
+    }
+
+    .empresa-propuesta-texto > p:not(.etiqueta) {
+        font-size: 16px;
+    }
+
+    .empresa-propuesta-texto ul {
+        font-size: 14px;
+    }
+
+    .empresa-propuesta-texto .boton-secundario {
+        padding: 14px 22px;
+
+        font-size: 14px;
+    }
+
+
+    /* -------------------------
+    CTA (VISTA ESCRITORIO)
+    ------------------------- */
+
+    .cta {
+        grid-template-columns: 1fr auto;
+
+        grid-template-areas:
+            "texto botones";
+
+        align-items: center;
+
+        column-gap: 60px;
+
+        padding: 55px 70px;
+    }
+
+    .cta h2 {
+        font-size: 38px;
+    }
+
+    .cta article > p:last-child {
+        font-size: 16px;
+    }
+
+    .cta-botones {
+        align-items: center;
+
+        gap: 16px;
+    }
+
+    .cta-botones .boton-principal,
+    .cta-botones .boton-secundario {
+        padding: 14px 24px;
+
+        font-size: 14px;
+
+        white-space: nowrap;
+    }
+}
+/* =========================================================
+   ESTILOS EXCLUSIVOS DE PRODUCTOS.HTML
+   ========================================================= */
+
+/* Hero */
+
+.hero-productos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 640px;
+    padding: 35px 60px 35px;
+
+    background-image: url("../crowna_assets_png/18_productofondo.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Texto del Hero */
+
+.hero-productos-texto {
+    width: 43%;
+    transform: translateY(-100px);
+}
+
+/* Título */
+
+.hero-productos h1 {
+    margin-top: 22px;
+
+    color: #11194D;
+
+    font-size: 50px;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+
+/* Descripción */
+
+.hero-productos-texto > p:not(.etiqueta) {
+    margin-top: 22px;
+
+    color: #4F5875;
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* Botón */
+
+.hero-productos .boton-principal {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 24px;
+
+    background-color: #5638F5;
+    color: #FFFFFF;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero-productos .boton-principal:hover {
+    background-color: #4528D8;
+}
+
+
+/* Imagen del producto */
+
+.hero-productos-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52%;
+}
+
+
+.hero-productos-imagen img {
+    display: block;
+
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Soluciones */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+
+    padding: 35px 60px 50px;
+
+    background-color: #F4F4FF;
+}
+
+
+/* Título de la sección */
+
+.productos h2 {
+    grid-column: 1 / -1;
+
+    margin: 0;
+
+    color: #11194D;
+
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+/* Tarjetas */
+
+.producto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 25px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+/* Iconos */
+
+.producto-card img {
+    display: block;
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 18px;
+
+    object-fit: contain;
+}
+
+
+/* Títulos de las soluciones */
+
+.producto-card h3 {
+    margin: 0;
+
+    color: #11194D;
+
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+
+/* Descripción */
+
+.producto-card p {
+    margin-top: 8px;
+
+    color: #4F5875;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   ESTILOS EXCLUSIVOS DE PLANES.HTML
+   ========================================================= */
+
+
+/* -------------------------
+HERO DE PLANES (VISTA MÓVIL)
+------------------------- */
+
+.hero-planes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 35px 20px;
+
+    background-image: url("../crowna_assets_png/20_planesfondo_fondo.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Texto del Hero */
+
+.hero-planes-texto {
+    width: 100%;
+}
+
+
+/* Título */
+
+.hero-planes h1 {
+    margin-top: 22px;
+
+    color: #11194D;
+
+    font-size: 54px;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+
+/* Descripción */
+
+.hero-planes-texto > p:not(.etiqueta) {
+    margin-top: 22px;
+
+    color: #4F5875;
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* Botón del Hero */
+
+.hero-planes .boton-principal {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 24px;
+
+    background-color: #5638F5;
+    color: #FFFFFF;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero-planes .boton-principal:hover {
+    background-color: #4528D8;
+}
+
+/* Imagen del Hero */
+
+.hero-planes-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.hero-planes-imagen img {
+    display: block;
+
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+
+    object-fit: contain;
+} 
+
+/* -------------------------
+PLANES (VISTA MÓVIL)
+------------------------- */
+
+.planes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    padding: 35px 20px 50px;
+
+    background-color: #F4F4FF;
+}
+
+
+/* Título de la sección */
+
+.planes h2 {
+    grid-column: 1 / -1;
+
+    margin: 0;
+
+    color: #11194D;
+
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* Periodicidad */
+
+.planes .periodicidad {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.periodicidad span {
+    padding: 10px 18px;
+
+    color: #11194D;
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.periodicidad span:last-child {
+    color: #5638F5;
+    background-color: #EAE6FF;
+
+    border-color: #EAE6FF;
+}
+
+
+/* -------------------------
+TARJETAS (VISTA MÓVIL)
+------------------------- */
+
+
+/* Tarjetas */
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 14px;
+}
+
+/* Título del plan */
+
+.plan-card h3 {
+    margin: 0;
+
+    color: #11194D;
+
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+
+/* Descripción del plan */
+
+.plan-card > p:not(.precio):not(.plan-popular) {
+    margin-top: 10px;
+
+    color: #4F5875;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Precio */
+
+.plan-card .precio {
+    margin-top: 22px;
+
+    color: #5638F5;
+
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+/* Texto /mes */
+
+.plan-card .precio span {
+    color: #4F5875;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* Lista */
+
+.plan-card ul {
+    margin-top: 22px;
+    padding-left: 18px;
+
+    color: #4F5875;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* Botón del plan */
+
+.boton-plan {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 13px 20px;
+
+    color: #5638F5;
+    background-color: #FFFFFF;
+
+    border: 1px solid #5638F5;
+    border-radius: 8px;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.boton-plan:hover {
+    color: #FFFFFF;
+    background-color: #5638F5;
+}
+
+
+/* Plan destacado */
+
+.plan-card.destacado {
+    border: 2px solid #5638F5;
+}
+
+
+/* Etiqueta "Más popular" */
+
+.plan-popular {
+    align-self: flex-start;
+
+    margin-bottom: 12px;
+    padding: 6px 10px;
+
+    color: #FFFFFF;
+    background-color: #5638F5;
+
+    border-radius: 15px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* -------------------------
+VISTA DE ESCRITORIO EN PLANES
+------------------------- */
+
+@media (min-width: 1024px) {
+       .hero-planes {
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 35px 60px;
+    }
+
+    .hero-planes-texto {
+        width: 43%;
+      }
+
+    .hero-planes-imagen {
+        width: 52%;
+    }
+
+    .planes {
+        grid-template-columns: repeat(4, 1fr);
+
+        padding: 35px 60px 50px;
+    }
+}
+
+/* =========================================================
+   ESTILOS EXCLUSIVOS DE RECURSOS.HTML
+   ========================================================= */
+
+
+/* Hero de Recursos */
+
+.hero-recursos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px
+;
+
+    min-height: 640px;
+    padding: 35px 60px 35px;
+
+    background-image: url("../crowna_assets_png/21_recursosfondo_fondo.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Texto del Hero */
+
+.hero-recursos-texto {
+    width: 43%;
+
+    transform: translateY(-100px);
+}
+
+/* Título */
+
+.hero-recursos h1 {
+    margin-top: 22px;
+
+    color: #11194D;
+
+    font-size: 54px;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+/* Descripción */
+
+.hero-recursos-texto > p:not(.etiqueta) {
+    margin-top: 22px;
+
+    color: #4F5875;
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Imagen del Hero */
+
+.hero-recursos-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52%;
+}
+
+
+.hero-recursos-imagen img {
+    display: block;
+
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* Recursos*/
+
+.recursos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+
+    padding: 35px 60px 50px;
+
+    background-color: #F4F4FF;
+}
+
+
+/* Título de la sección */
+
+.recursos h2 {
+    grid-column: 1 / -1;
+
+    margin: 0;
+
+    color: #11194D;
+
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+/* Tarjetas */
+
+.recurso-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 14px;
+}
+
+/* Título */
+
+.recurso-card h3 {
+    margin: 0;
+
+    color: #11194D;
+
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+/* Descripción */
+
+.recurso-card p {
+    margin-top: 10px;
+
+    color: #4F5875;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Banner del final */
+
+.banner-recursos {
+    padding: 0 60px 50px;
+
+    background-color: #F4F4FF;
+}
+
+
+.banner-recursos article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 35px;
+
+    background-color: #5638F5;
+
+    border-radius: 14px;
+}
+
+
+/* Título del banner */
+
+.banner-recursos h2 {
+    color: #FFFFFF;
+
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+
+/* Descripción del banner */
+
+.banner-recursos p {
+    margin-top: 5px;
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Botón del banner */
+
+.banner-recursos a {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    color: #5638F5;
+    background-color: #FFFFFF;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.banner-recursos a:hover {
+    background-color: #F0EDFF;
+}
+
+/* =========================================================
+   ESTILOS EXCLUSIVOS DE EMPRESA.HTML
+   ========================================================= */
+
+
+/* Hero de Empresa */
+
+.hero-empresa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 640px;
+    padding: 35px 60px 35px;
+
+    background-image: url("../crowna_assets_png/22_empresafondo_fondo.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Texto */
+
+.hero-empresa-texto {
+    width: 48%;
+
+    transform: translateY(-40px);
+}
+
+
+/* Título */
+
+.hero-empresa h1 {
+    margin-top: 22px;
+
+    color: #11194D;
+
+    font-size: 48px;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+
+/* Descripción */
+
+.hero-empresa-texto > p:not(.etiqueta) {
+    margin-top: 22px;
+
+    color: #4F5875;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Misión ,visión y valores */
+
+.empresa-info {
+    margin-top: 22px;
+}
+
+
+.empresa-info h3 {
+    margin: 0;
+
+    color: #11194D;
+
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+
+.empresa-info p {
+    margin-top: 5px;
+
+    color: #4F5875;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Imagen de Empresa */
+
+.hero-empresa-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48%;
+}
+
+
+.hero-empresa-imagen img {
+    display: block;
+
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Estadisticas */
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+
+    margin: -35px 60px 50px;
+    padding: 25px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 14px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Cada estadística */
+
+.estadisticas article {
+    padding: 10px 25px;
+
+    text-align: center;
+
+    border-right: 1px solid #E8E8F5;
+}
+
+
+/* El último no necesita separación */
+
+.estadisticas article:last-child {
+    border-right: none;
+}
+
+
+/* Número */
+
+.estadisticas h2 {
+    margin: 0;
+
+    color: #5638F5;
+
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+/* Descripción */
+
+.estadisticas p {
+    margin-top: 8px;
+
+    color: #4F5875;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   ESTILOS EXCLUSIVOS DE CONTACTO.HTML
+   ========================================================= */
+
+
+/* Hero de Contacto */
+
+.hero-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 640px;
+    padding: 35px 60px 35px;
+
+    background-image: url("../crowna_assets_png/23_contactofondo.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Información de Contacto */
+
+.hero-contacto-texto {
+    width: 40%;
+
+    transform: translateY(-30px);
+}
+
+
+/* Título */
+
+.hero-contacto h1 {
+    margin-top: 22px;
+
+    color: #11194D;
+
+    font-size: 48px;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+
+/* Descripción */
+
+.hero-contacto-texto > p:not(.etiqueta) {
+    margin-top: 22px;
+
+    color: #4F5875;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Datos de contacto */
+
+.contacto-info {
+    margin-top: 22px;
+}
+
+
+.contacto-info h3 {
+    margin: 0;
+
+    color: #11194D;
+
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+
+.contacto-info p {
+    margin-top: 5px;
+
+    color: #4F5875;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Formulario visual */
+
+.contacto-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
+    row-gap: 18px;
+
+    width: 48%;
+    max-width: 560px;
+
+    padding: 28px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 14px;
+}
+
+
+/* Título del formulario */
+
+.contacto-formulario h2 {
+    grid-column: 1 / -1;
+
+    margin: 0;
+
+    color: #11194D;
+
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+
+/* Campos */
+
+.campo {
+    padding: 17px;
+
+    color: #4F5875;
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+
+/* Campo que ocupa todo el ancho */
+
+.campo:nth-of-type(5) {
+    grid-column: 1 / -1;
+}
+
+
+/* Mensaje */
+
+.campo-mensaje {
+    grid-column: 1 / -1;
+
+    min-height: 150px;
+
+    padding: 17px;
+
+    color: #4F5875;
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+
+/* Botón */
+
+.contacto-formulario .boton-principal {
+    grid-column: 1 / -1;
+
+    margin-top: 0;
+
+    text-align: center;
+}
