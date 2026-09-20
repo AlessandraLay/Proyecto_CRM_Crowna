@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <!-- Hoja de estilos -->
 
     <link rel="stylesheet" href="../css/style.css">
@@ -25,38 +28,90 @@
 
     <header>
 
-        <div class="menu">
+         <nav class="navbar navbar-expand-lg">
 
-            <!-- Logo -->
+            <div class="container">
 
-            <a href="../index.html">
+                <!-- Logo -->
 
-                <img
-                    src="../crowna_assets_png/01_logo_principal.png"
-                    alt="Logo de Crowna CRM"
-                    width="150"
+                <a class="navbar-brand" href="../index.html">
+
+                    <img
+                        src="../crowna_assets_png/01_logo_principal.png"
+                        alt="Logo de Crowna CRM"
+                        width="150"
+                    >
+
+                </a>
+
+             <!-- BOTÓN HAMBURGUESA -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Abrir navegación"
                 >
 
-            </a>
+                    <span class="navbar-toggler-icon"></span>
 
-            <!-- Navegación -->
+                </button>
+        
+            <!-- MENÚ Navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
 
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="planes.html">Planes</a></li>
-                    <li><a href="recursos.html">Recursos</a></li>
-                    <li><a href="empresa.html">Empresa</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+                    <ul class="navbar-nav mx-auto">
 
-            <a href="contacto.html" class="boton-demo">
-            Solicitar demo →
-        </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                Inicio
+                            </a>
+                        </li>
 
-        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">
+                                Productos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="planes.html">
+                                Planes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="recursos.html">
+                                Recursos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="empresa.html">
+                                Empresa
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">
+                                Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+
+           <!-- BOTÓN DEMO -->
+                <a href="contacto.html" class="boton-demo">
+                    Solicitar demo →
+                </a>
+
+                </div>
+
+            </div>
+
+        </nav>
 
     </header>
 
@@ -185,6 +240,9 @@
         </p>
 
     </footer>
+
+     <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 
