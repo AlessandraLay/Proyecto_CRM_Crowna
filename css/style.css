@@ -26,7 +26,7 @@ header {
     border-bottom: 1px solid #E8E8F5;
 }
 
-/* Menú (Vista móvil) */
+/* Menú */
 
 .menu {
     display: flex;
@@ -44,7 +44,7 @@ header {
 }
 
 
-/* Botón Menú (Vista móvil) */
+/* Botón Menú */
 
 .menu-toggle {
     display: block;
@@ -63,7 +63,7 @@ header {
 }
 
 
-/* Navegación (Vista móvil) */
+/* Navegación */
 
 nav {
     display: none;
@@ -92,7 +92,7 @@ nav a:hover {
 }
 
 
-/* Botón Demo (Vista móvil) */
+/* Botón Demo */
 
 .boton-demo {
     display: none;
@@ -179,8 +179,6 @@ nav a:hover {
    PIE DE PÁGINA - TODAS LAS PÁGINAS
    ========================================================= */
 
-/* Pie de página (Vista Móvil) */
-
 footer {
     padding: 30px 20px;
 
@@ -191,7 +189,8 @@ footer {
     text-align: center;
 }
 
-/* Texto General - (Vista Móvil) */
+
+/* Texto General */
 
 footer p {
     color: #4F5875;
@@ -200,17 +199,8 @@ footer p {
     line-height: 1.5;
 }
 
-/* Contenedor principal - (Vista Móvil) */
 
-.footer-contenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 25px;
-}
-
-/* marca (Vista Móvil) */
+/* Marca */
 
 .footer-marca {
     display: flex;
@@ -228,38 +218,14 @@ footer p {
 }
 
 
-/* copyright (Vista Móvil) */
+/* Copyright */
 
 .copyright {
     margin-top: 2px;
 }
 
 
-/* Redes sociales (Vista Móvil) */
-
-.footer-redes {
-    display: flex;
-    align-items: center;
-
-    gap: 18px;
-}
-
-.footer-redes a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-redes img {
-    display: block;
-
-    width: 30px;
-    height: 30px;
-
-    object-fit: contain;
-}
-
-/* Newsletter (Vista Móvil) */
+/* Newsletter */
 
 .footer-newsletter {
     display: flex;
@@ -319,15 +285,77 @@ footer p {
     font-size: 18px;
 
     cursor: pointer;
+
+    transition: background-color 0.3s ease;
 }
 
 .footer-newsletter button:hover {
     background-color: #4528D8;
 }
 
-/* Pie de página (Vista Escritorio) */
+.footer-newsletter button:focus {
+    outline: 2px solid #5638F5;
+    outline-offset: 2px;
+}
 
-@media (min-width: 1024px) {
+.footer-newsletter button:active {
+    background-color: #351FB5;
+}
+
+
+/* Redes sociales */
+
+.footer-redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.footer-redes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-redes img {
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    object-fit: contain;
+}
+
+
+/* Vista tablet */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    footer {
+        padding: 35px 40px;
+    }
+
+    .footer-marca img {
+        width: 100px;
+    }
+
+    .footer-newsletter h3 {
+        font-size: 18px;
+    }
+
+    .footer-redes img {
+        width: 32px;
+        height: 32px;
+    }
+
+}
+
+
+/* Vista escritorio */
+
+@media (min-width: 992px) {
 
     footer {
         padding: 35px 60px;
@@ -335,27 +363,10 @@ footer p {
         text-align: left;
     }
 
-/* Contenedor (Vista Escritorio) */
 
-    .footer-contenido {
-        display: grid;
-
-        grid-template-columns: 1fr 1fr 1fr;
-
-        grid-template-areas:
-            "marca newsletter redes";
-
-        align-items: center;
-
-        gap: 50px;
-    }
-
-
-/* Marca (Vista Escritorio) */
+    /* Marca */
 
     .footer-marca {
-        grid-area: marca;
-
         align-items: center;
     }
 
@@ -368,31 +379,24 @@ footer p {
     }
 
 
-/* Newsletter (Vista Escritorio) */
+    /* Newsletter */
 
     .footer-newsletter {
-        grid-area: newsletter;
-
         align-items: center;
-
-        justify-self: center;
     }
 
 
-/* Redes sociales (Vista Escritorio) */
+    /* Redes sociales */
 
     .footer-redes {
-        grid-area: redes;
-
         justify-content: flex-end;
-
-        justify-self: end;
     }
 
     .footer-redes img {
         width: 34px;
         height: 34px;
     }
+
 }
 
 /* =========================================================
@@ -405,17 +409,6 @@ footer p {
    ------------------------- */
 
 .hero {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-        "texto"
-        "indicadores"
-        "dashboard";
-
-    gap: 22px;
-
     padding: 35px 20px 30px;
 
     background-image: url("../crowna_assets_png/19_iniciodashboard_fondo.png");
@@ -428,7 +421,7 @@ footer p {
 /* Texto (vista móvil) */
 
 .hero-texto {
-    grid-area: texto;
+    width: 100%;
 }
 
 .etiqueta {
@@ -460,7 +453,8 @@ footer p {
 }
 
 .hero-texto > p:not(.etiqueta) {
-    max-width: 520px;
+    width: 100%;
+    max-width: none;
 
     margin-top: 15px;
 
@@ -477,10 +471,12 @@ footer p {
 .botones {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     gap: 10px;
 
-    margin-top: 20px;
+    margin-top: 28px;
+    margin-bottom: 20px;
 }
 
 .botones .boton-principal,
@@ -524,23 +520,14 @@ footer p {
 
 
 .indicadores {
-    grid-area: indicadores;
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 8px;
-}
 
-.indicadores article {
-    padding: 9px 5px;
-
-    background-color: #FFFFFF;
-
-    border-radius: 9px;
-
-    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 .indicadores strong {
@@ -562,13 +549,9 @@ footer p {
     line-height: 1.3;
 }
 
-
 /* Dashboard (vista móvil) */
 
-
 .hero-dashboard {
-    grid-area: dashboard;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -588,7 +571,7 @@ footer p {
 
 
 /* -------------------------
-  MARCAS (VISTA MÓVIL)
+  MARCAS
    ------------------------- */
 
 
@@ -612,54 +595,268 @@ footer p {
     font-size: 11px;
 }
 
-.marcas-lista {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 16px;
-
-    width: 100%;
+.marcas .row:last-child > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.marcas-lista span {
+.marcas .row:last-child span {
     color: #11194D;
 
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
 }
 
+.marcas .row:last-child span:hover {
+    color: #5B3DF5;
+}
+
+/* Vista escritorio */
+
+@media (min-width: 1024px) {
+
+    .marcas {
+        gap: 24px;
+        padding: 38px 60px;
+    }
+
+    .marcas > p {
+        font-size: 14px;
+    }
+
+}
 
 /* -------------------------
-  FUNCIONALIDADES (VISTA MÓVIL)
+   CASOS DE ÉXITO
    ------------------------- */
 
-
-.funcionalidades {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-        "intro"
-        "clientes"
-        "automatizacion"
-        "reportes"
-        "citas";
-
-    gap: 12px;
-
-    padding: 45px 20px;
+.casos-exito {
+    padding: 40px 20px;
 
     background-color: #F4F4FF;
 }
 
 
-/* Funcionalidades Introducción (vista móvil) */
+/* Etiqueta */
 
-.funcionalidades-intro {
-    grid-area: intro;
+.casos-exito .etiqueta {
+    display: inline-block;
+
+    margin-bottom: 14px;
 }
+
+
+/* Título */
+
+.casos-exito h2 {
+    margin-bottom: 25px;
+
+    color: #11194D;
+
+    font-size: 28px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+
+/* Carousel */
+
+.casos-exito .carousel {
+    padding-bottom: 45px;
+}
+
+
+/* Tarjeta */
+
+.caso-card {
+    min-height: 250px;
+
+    padding: 24px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8E8F5;
+    border-radius: 12px;
+}
+
+
+/* Testimonio */
+
+.caso-testimonio {
+    margin-bottom: 25px;
+
+    color: #4F5875;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Persona */
+
+.caso-persona {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.caso-persona strong {
+    display: block;
+
+    color: #11194D;
+
+    font-size: 14px;
+}
+
+.caso-persona p {
+    margin-top: 4px;
+
+    color: #4F5875;
+
+    font-size: 12px;
+}
+
+
+/* Marca */
+
+.caso-marca {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #11194D;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* Flechas */
+
+.casos-exito .carousel-control-prev,
+.casos-exito .carousel-control-next {
+    width: 45px;
+}
+
+.casos-exito .carousel-control-prev {
+    left: 0;
+    transform: translateX(-25px);
+}
+
+.casos-exito .carousel-control-next {
+    right: 0;
+    transform: translateX(25px);
+}
+
+.casos-exito .carousel-control-prev-icon,
+.casos-exito .carousel-control-next-icon {
+    width: 32px;
+    height: 32px;
+
+    background-color: #5638F5;
+
+    background-size: 45%;
+
+    border-radius: 50%;
+}
+
+
+/* Indicadores */
+
+.casos-exito .carousel-indicators {
+    bottom: 0;
+}
+
+.casos-exito .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+
+    margin: 0 5px;
+
+    background-color: #5638F5;
+
+    border: 0;
+
+    border-radius: 50%;
+}
+
+
+/* Vista tablet */
+
+@media (min-width: 768px) {
+
+    .casos-exito {
+        padding: 50px 40px;
+    }
+
+}
+
+
+/* Vista escritorio */
+
+@media (min-width: 1024px) {
+
+    .casos-exito {
+        padding: 50px 60px;
+    }
+
+    .casos-exito h2 {
+        font-size: 32px;
+    }
+
+    .caso-card {
+        min-height: 220px;
+
+        padding: 30px;
+    }
+
+    .caso-testimonio {
+        font-size: 16px;
+    }
+
+    .caso-persona {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        gap: 20px;
+    }
+
+    /* Flechas fuera de las tarjetas */
+
+    .casos-exito .carousel-control-prev {
+        left: -10px;
+    }
+
+    .casos-exito .carousel-control-next {
+        right: -10px;
+    }
+
+    .casos-exito .carousel-control-prev-icon,
+    .casos-exito .carousel-control-next-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+}
+
+/* -------------------------
+  FUNCIONALIDADES 
+   ------------------------- */
+
+
+.funcionalidades {
+    padding: 45px 20px;
+    background-color: #F4F4FF;
+}
+
+
+/* Funcionalidades Introducción */
 
 .funcionalidades-intro h2 {
     margin-top: 14px;
@@ -676,28 +873,12 @@ footer p {
 
     color: #4F5875;
 
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
 
-/* Funcionalidades Tarjetas (vista móvil) */
-
-.funcionalidades-card-clientes_360 {
-    grid-area: clientes;
-}
-
-.funcionalidades-card-automatizacion {
-    grid-area: automatizacion;
-}
-
-.funcionalidades-card-decisiones {
-    grid-area: reportes;
-}
-
-.funcionalidades-card-citas {
-    grid-area: citas;
-}
+/* Funcionalidades Tarjetas */
 
 .funcionalidades-card-clientes_360,
 .funcionalidades-card-automatizacion,
@@ -714,10 +895,12 @@ footer p {
 
     border: 1px solid #E8E8F5;
     border-radius: 10px;
+
+    height: 100%;
 }
 
 
-/* Funcionalidades Iconos (vista móvil) */
+/* Funcionalidades Iconos */
 
 .funcionalidades-card-clientes_360 img,
 .funcionalidades-card-automatizacion img,
@@ -732,7 +915,7 @@ footer p {
 }
 
 
-/* Funcionalidades Títulos (vista móvil) */
+/* Funcionalidades Títulos */
 
 .funcionalidades-card-clientes_360 h3,
 .funcionalidades-card-automatizacion h3,
@@ -742,12 +925,12 @@ footer p {
 
     color: #11194D;
 
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.3;
 }
 
 
-/* Funcionalidades Textos (vista móvil) */
+/* Funcionalidades Textos */
 
 .funcionalidades-card-clientes_360 p,
 .funcionalidades-card-automatizacion p,
@@ -757,36 +940,37 @@ footer p {
 
     color: #4F5875;
 
-    font-size: 9px;
+    font-size: 14px;
     line-height: 1.4;
 }
 
 
+/* Vista escritorio */
+
+@media (min-width: 1024px) {
+
+    .funcionalidades {
+        padding: 65px 60px;
+    }
+
+}
+
 /* -------------------------
-  PROPUESTA DE LA EMRESA (VISTA MÓVIL)
+  PROPUESTA DE LA EMRESA
    ------------------------- */
 
 .empresa-propuesta {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-        "imagen"
-        "texto";
-
-    gap: 25px;
-
     padding: 45px 20px;
-
     background-color: #FFFFFF;
 }
 
-.empresa-propuesta-imagen {
-    grid-area: imagen;
 
+/* Imagen */
+
+.empresa-propuesta-imagen {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .empresa-propuesta-imagen img {
@@ -797,9 +981,8 @@ footer p {
     height: auto;
 }
 
-.empresa-propuesta-texto {
-    grid-area: texto;
-}
+
+/* Texto */
 
 .empresa-propuesta-texto h2 {
     margin-top: 14px;
@@ -819,6 +1002,9 @@ footer p {
     line-height: 1.5;
 }
 
+
+/* Lista */
+
 .empresa-propuesta-texto ul {
     display: flex;
     flex-direction: column;
@@ -833,6 +1019,9 @@ footer p {
     font-size: 11px;
     line-height: 1.4;
 }
+
+
+/* Botón */
 
 .empresa-propuesta-texto .boton-secundario {
     display: inline-block;
@@ -853,30 +1042,87 @@ footer p {
     font-weight: 600;
 }
 
+/* Vista escritorio */
+
+@media (min-width: 1024px) {
+
+    .empresa-propuesta {
+        padding: 80px 60px;
+    }
+
+    /* Imagen */
+
+    .empresa-propuesta-imagen img {
+        max-width: 520px;
+    }
+
+    /* Texto */
+
+    .empresa-propuesta-texto h2 {
+        margin-top: 18px;
+
+        font-size: 42px;
+        line-height: 1.15;
+    }
+
+    .empresa-propuesta-texto > p:not(.etiqueta) {
+        margin-top: 18px;
+
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Lista */
+
+    .empresa-propuesta-texto ul {
+        gap: 10px;
+
+        margin-top: 22px;
+
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Botón */
+
+    .empresa-propuesta-texto .boton-secundario {
+        margin-top: 24px;
+
+        padding: 14px 22px;
+
+        font-size: 14px;
+    }
+
+}
+
+/* Vista tablet */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .empresa-propuesta-imagen img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .empresa-propuesta-texto {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+}
 
 /* -------------------------
   CTA (VISTA MÓVIL)
    ------------------------- */
 
 .cta {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-        "texto"
-        "botones";
-
-    gap: 22px;
-
     padding: 40px 20px;
 
     background-color: #17142F;
 }
 
-.cta article {
-    grid-area: texto;
-}
+
+/* Título */
 
 .cta h2 {
     margin-top: 14px;
@@ -887,6 +1133,9 @@ footer p {
     line-height: 1.1;
 }
 
+
+/* Descripción */
+
 .cta article > p:last-child {
     margin-top: 14px;
 
@@ -896,14 +1145,18 @@ footer p {
     line-height: 1.5;
 }
 
-.cta-botones {
-    grid-area: botones;
 
+/* Botones */
+
+.cta-botones {
     display: flex;
+    flex-wrap: wrap;
 
     gap: 10px;
 }
 
+
+/* Botón principal */
 
 .cta-botones .boton-principal {
     display: inline-block;
@@ -924,6 +1177,9 @@ footer p {
     text-align: center;
 }
 
+
+/* Botón secundario */
+
 .cta-botones .boton-secundario {
     display: inline-block;
 
@@ -943,12 +1199,50 @@ footer p {
     text-align: center;
 }
 
+
+/* Hover */
+
 .cta-botones .boton-principal:hover {
     background-color: #4528D8;
 }
 
 .cta-botones .boton-secundario:hover {
     background-color: #2A2648;
+}
+
+
+/* Vista escritorio */
+
+@media (min-width: 1024px) {
+
+    .cta {
+        padding: 55px 70px;
+    }
+
+    .cta h2 {
+        font-size: 38px;
+    }
+
+    .cta article > p:last-child {
+        font-size: 16px;
+    }
+
+    .cta-botones {
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 16px;
+    }
+
+    .cta-botones .boton-principal,
+    .cta-botones .boton-secundario {
+        padding: 14px 24px;
+
+        font-size: 14px;
+
+        white-space: nowrap;
+    }
+
 }
 
 
@@ -964,17 +1258,6 @@ footer p {
     ------------------------- */
 
     .hero {
-        grid-template-columns: 0.85fr 1.15fr;
-
-        grid-template-rows: auto auto;
-
-        grid-template-areas:
-            "texto dashboard"
-            "indicadores dashboard";
-
-        column-gap: 45px;
-        row-gap: 25px;
-
         min-height: 570px;
 
         padding: 55px 70px 50px;
@@ -984,8 +1267,6 @@ footer p {
     /* Texto */
 
     .hero-texto {
-        align-self: end;
-
         width: 100%;
     }
 
@@ -1044,8 +1325,6 @@ footer p {
 
     .indicadores {
         gap: 14px;
-
-        align-self: start;
     }
 
     .indicadores article {
@@ -1061,188 +1340,8 @@ footer p {
     .indicadores p {
         font-size: 11px;
     }
-
-
-    /* -------------------------
-    MARCAS (VISTA ESCRITORIO)
-    ------------------------- */
-
-    .marcas {
-        gap: 24px;
-
-        padding: 38px 60px;
     }
 
-    .marcas > p {
-        font-size: 14px;
-    }
-
-    .marcas-lista {
-        grid-template-columns: repeat(6, 1fr);
-
-        gap: 25px;
-    }
-
-    .marcas-lista span {
-        font-size: 15px;
-    }
-
-
-    /* -------------------------
-    FUNCIONALIDADES (VISTA ESCRITORIO)
-    ------------------------- */
-
-    .funcionalidades {
-        grid-template-columns: 1.05fr 1fr 1fr;
-
-        grid-template-areas:
-            "intro clientes automatizacion"
-            "intro reportes citas";
-
-        gap: 18px;
-
-        padding: 65px 60px;
-    }
-
-    .funcionalidades-intro {
-        align-self: center;
-
-        padding-right: 20px;
-    }
-
-    .funcionalidades-intro h2 {
-        font-size: 40px;
-    }
-
-    .funcionalidades-intro > p:last-child {
-        max-width: 560px;
-
-        font-size: 16px;
-    }
-
-
-    /* Tarjetas */
-
-    .funcionalidades-card-clientes_360,
-    .funcionalidades-card-automatizacion,
-    .funcionalidades-card-decisiones,
-    .funcionalidades-card-citas {
-        min-height: 190px;
-
-        padding: 25px;
-    }
-
-    .funcionalidades-card-clientes_360 img,
-    .funcionalidades-card-automatizacion img,
-    .funcionalidades-card-decisiones img,
-    .funcionalidades-card-citas img {
-        width: 48px;
-        height: 48px;
-    }
-
-    .funcionalidades-card-clientes_360 h3,
-    .funcionalidades-card-automatizacion h3,
-    .funcionalidades-card-decisiones h3,
-    .funcionalidades-card-citas h3 {
-        margin-top: 15px;
-
-        font-size: 18px;
-    }
-
-    .funcionalidades-card-clientes_360 p,
-    .funcionalidades-card-automatizacion p,
-    .funcionalidades-card-decisiones p,
-    .funcionalidades-card-citas p {
-        font-size: 14px;
-    }
-
-
-    /* -------------------------
-    PROPUESTA DE EMPRESA (VISTA ESCRITORIO)
-    ------------------------- */
-
-    .empresa-propuesta {
-        grid-template-columns: 1fr 1fr;
-
-        grid-template-areas:
-            "imagen texto";
-
-        gap: 60px;
-
-        padding: 75px 60px;
-    }
-
-    .empresa-propuesta-imagen {
-        align-self: center;
-    }
-
-    .empresa-propuesta-imagen img {
-        max-width: 560px;
-    }
-
-    .empresa-propuesta-texto {
-        align-self: center;
-    }
-
-    .empresa-propuesta-texto h2 {
-        font-size: 38px;
-    }
-
-    .empresa-propuesta-texto > p:not(.etiqueta) {
-        font-size: 16px;
-    }
-
-    .empresa-propuesta-texto ul {
-        font-size: 14px;
-    }
-
-    .empresa-propuesta-texto .boton-secundario {
-        padding: 14px 22px;
-
-        font-size: 14px;
-    }
-
-
-    /* -------------------------
-    CTA (VISTA ESCRITORIO)
-    ------------------------- */
-
-    .cta {
-        grid-template-columns: 1fr auto;
-
-        grid-template-areas:
-            "texto botones";
-
-        align-items: center;
-
-        column-gap: 60px;
-
-        padding: 55px 70px;
-    }
-
-    .cta h2 {
-        font-size: 38px;
-    }
-
-    .cta article > p:last-child {
-        font-size: 16px;
-    }
-
-    .cta-botones {
-        align-items: center;
-
-        gap: 16px;
-    }
-
-    .cta-botones .boton-principal,
-    .cta-botones .boton-secundario {
-        padding: 14px 24px;
-
-        font-size: 14px;
-
-        white-space: nowrap;
-    }
-}
 /* =========================================================
    ESTILOS EXCLUSIVOS DE PRODUCTOS.HTML
    ========================================================= */
