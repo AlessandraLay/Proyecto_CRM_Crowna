@@ -110,8 +110,37 @@ nav a:hover {
     font-weight: 600;
 }
 
+.boton-demo {
+    display: none;
+
+    padding: 14px 22px;
+
+    color: #FFFFFF;
+    background-color: #5638F5;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
+}
+
 .boton-demo:hover {
+    color: #FFFFFF;
     background-color: #4528D8;
+}
+
+.boton-demo:focus {
+    color: #FFFFFF;
+    background-color: #4528D8;
+}
+
+.boton-demo:active {
+    color: #FFFFFF;
+    background-color: #351FB0;
 }
 
 
@@ -1040,6 +1069,29 @@ footer p {
 
     font-size: 11px;
     font-weight: 600;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover */
+
+.empresa-propuesta-texto .boton-secundario:hover {
+    color: #FFFFFF;
+    background-color: #5638F5;
+}
+
+/* Focus */
+
+.empresa-propuesta-texto .boton-secundario:focus {
+    color: #FFFFFF;
+    background-color: #5638F5;
+}
+
+/* Active */
+
+.empresa-propuesta-texto .boton-secundario:active {
+    color: #FFFFFF;
+    background-color: #4528D8;
 }
 
 /* Vista escritorio */
@@ -1346,127 +1398,212 @@ footer p {
    ESTILOS EXCLUSIVOS DE PRODUCTOS.HTML
    ========================================================= */
 
-/* Hero */
+
+/* -------------------------
+   HERO DE PRODUCTOS
+   ------------------------- */
 
 .hero-productos {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    min-height: 640px;
-    padding: 35px 60px 35px;
+    padding: 55px 20px;
 
     background-image: url("../crowna_assets_png/18_productofondo.png");
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
+
+    overflow: hidden;
 }
 
 
 /* Texto del Hero */
 
 .hero-productos-texto {
-    width: 43%;
-    transform: translateY(-100px);
+    width: 100%;
 }
+
+
+/* Etiqueta */
+
+.hero-productos-texto .etiqueta {
+    margin-bottom: 0;
+}
+
 
 /* Título */
 
 .hero-productos h1 {
-    margin-top: 22px;
+    margin-top: 18px;
 
     color: #11194D;
 
-    font-size: 50px;
+    font-size: 40px;
     line-height: 1.08;
     font-weight: 700;
+
+    overflow-wrap: break-word;
+}
+
+.hero-productos h1 span {
+    color: #5638F5;
 }
 
 
 /* Descripción */
 
 .hero-productos-texto > p:not(.etiqueta) {
-    margin-top: 22px;
+    margin-top: 18px;
 
     color: #4F5875;
 
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 
-/* Botón */
+/* Botones */
+
+.hero-productos-botones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+/* Botón principal */
 
 .hero-productos .boton-principal {
     display: inline-block;
 
-    margin-top: 30px;
+    padding: 12px 18px;
 
-    padding: 15px 24px;
-
-    background-color: #5638F5;
     color: #FFFFFF;
+    background-color: #5638F5;
 
+    border: 1px solid #5638F5;
     border-radius: 8px;
 
     text-decoration: none;
 
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
+
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease;
 }
 
 .hero-productos .boton-principal:hover {
     background-color: #4528D8;
+    border-color: #4528D8;
 }
 
 
-/* Imagen del producto */
+/* Botón secundario */
+
+.hero-productos .boton-secundario {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    color: #5638F5;
+    background-color: #FFFFFF;
+
+    border: 1px solid #5638F5;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.hero-productos .boton-secundario:hover {
+    color: #FFFFFF;
+    background-color: #5638F5;
+}
+
+
+/* Imagen del Hero */
 
 .hero-productos-imagen {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 52%;
-}
+    width: 100%;
 
+    overflow: hidden;
+}
 
 .hero-productos-imagen img {
     display: block;
 
     width: 100%;
-    max-width: 650px;
+    max-width: 100%;
     height: auto;
-
-    object-fit: contain;
 }
 
+/* HERO DE PRODUCTOS - DESKTOP */
 
-/* Soluciones */
+@media (min-width: 1024px) {
 
-.productos {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
+    .hero-productos {
+        min-height: 520px;
+        padding: 40px 0;
+    }
 
-    padding: 35px 60px 50px;
+}
+
+/* -------------------------
+   SOLUCIONES MODULARES
+   ------------------------- */
+
+.soluciones-modulares {
+    padding: 55px 20px;
 
     background-color: #F4F4FF;
+
+    overflow: hidden;
 }
 
 
-/* Título de la sección */
+/* Título */
 
-.productos h2 {
-    grid-column: 1 / -1;
-
-    margin: 0;
+.soluciones-modulares-intro h2 {
+    margin-top: 16px;
 
     color: #11194D;
 
-    font-size: 30px;
-    line-height: 1.2;
+    font-size: 40px;
+    line-height: 1.08;
     font-weight: 700;
+
+    overflow-wrap: break-word;
+}
+
+
+/* Descripción */
+
+.soluciones-modulares-descripcion {
+    margin: 0;
+
+    color: #4F5875;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* Grid de tarjetas */
+
+.soluciones-modulares-grid {
+    margin-top: 35px;
 }
 
 
@@ -1475,16 +1612,30 @@ footer p {
 .producto-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 
-    padding: 25px;
+    height: 100%;
+
+    padding: 22px;
 
     background-color: #FFFFFF;
 
     border: 1px solid #E8E8F5;
     border-radius: 14px;
 
-    text-align: center;
+    text-align: left;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Hover de las tarjetas */
+
+.producto-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(17, 25, 77, 0.08);
 }
 
 
@@ -1493,23 +1644,23 @@ footer p {
 .producto-card img {
     display: block;
 
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
     object-fit: contain;
 }
 
 
-/* Títulos de las soluciones */
+/* Títulos */
 
 .producto-card h3 {
     margin: 0;
 
     color: #11194D;
 
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.3;
     font-weight: 700;
 }
@@ -1519,11 +1670,779 @@ footer p {
 
 .producto-card p {
     margin-top: 8px;
+    margin-bottom: 0;
+
+    color: #4F5875;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* -------------------------
+   EXPLORA LOS MÓDULOS
+   ------------------------- */
+
+.explora-modulos {
+    padding: 55px 20px;
+
+    background-color: #FFFFFF;
+
+    overflow: hidden;
+}
+
+
+/* Título */
+
+.explora-modulos-intro h2 {
+    margin-top: 16px;
+
+    color: #11194D;
+
+    font-size: 40px;
+    line-height: 1.08;
+    font-weight: 700;
+
+    overflow-wrap: break-word;
+}
+
+
+/* Descripción */
+
+.explora-modulos-descripcion {
+    margin: 0;
+
+    color: #4F5875;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* Carousel */
+
+#carouselModulos {
+    margin-top: 40px;
+
+    padding-bottom: 55px;
+}
+
+
+/* Slide */
+
+.modulo-slide {
+    min-height: 400px;
+}
+
+
+/* Mockup */
+
+.modulo-mockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.modulo-mockup img {
+    display: block;
+
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* SLIDE DEL CAROUSEL */
+
+.modulo-slide {
+    position: relative;
+
+    padding-bottom: 70px;
+}
+
+
+/* Información */
+
+.modulo-info {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* Etiqueta del módulo */
+
+.modulo-etiqueta {
+    margin-bottom: 0;
+
+    color: #5638F5;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* Título del módulo */
+
+.modulo-info h3 {
+    color: #11194D;
+
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 700;
+
+    overflow-wrap: break-word;
+}
+
+
+/* Descripción del módulo */
+
+.modulo-info > p {
+    color: #4F5875;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* Lista de beneficios */
+
+.modulo-info ul {
+    margin-bottom: 0;
+    padding-left: 20px;
 
     color: #4F5875;
 
     font-size: 14px;
     line-height: 1.5;
+}
+
+.modulo-info li {
+    margin-bottom: 8px;
+}
+
+.modulo-info li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Indicadores */
+
+#carouselModulos .carousel-indicators {
+    bottom: 0;
+
+    margin-bottom: 0;
+}
+
+#carouselModulos .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+
+    margin: 0 5px;
+
+    background-color: #5638F5;
+
+    border: 0;
+
+    border-radius: 50%;
+}
+
+
+/* Flechas */
+
+#carouselModulos .carousel-control-prev,
+#carouselModulos .carousel-control-next {
+    width: 36px;
+    height: 36px;
+
+    top: 130px;
+    bottom: auto;
+
+    opacity: 1;
+
+    z-index: 10;
+}
+
+#carouselModulos .carousel-control-prev {
+    left: 0;
+}
+
+#carouselModulos .carousel-control-next {
+    right: 0;
+}
+
+#carouselModulos .carousel-control-prev-icon,
+#carouselModulos .carousel-control-next-icon {
+    width: 36px;
+    height: 36px;
+
+    background-color: #A99BFF;
+
+    background-size: 45%;
+
+    border-radius: 50%;
+}
+
+/* EFECTOS FLECHAS DEL CAROUSEL */
+
+.explora-modulos .carousel-control-prev,
+.explora-modulos .carousel-control-next {
+    transition: all 0.2s ease;
+}
+
+/* HOVER */
+
+.explora-modulos .carousel-control-prev:hover,
+.explora-modulos .carousel-control-next:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+/* FOCUS */
+
+.explora-modulos .carousel-control-prev:focus,
+.explora-modulos .carousel-control-next:focus {
+    opacity: 1;
+    outline: 2px solid #5638F5;
+    outline-offset: 3px;
+}
+
+/* ACTIVE */
+
+.explora-modulos .carousel-control-prev:active,
+.explora-modulos .carousel-control-next:active {
+    transform: scale(0.95);
+}
+
+/* -------------------------
+   CROWNA AI
+   ------------------------- */
+
+.crowna-ai {
+    padding: 55px 20px;
+
+    background-color: #F4F4FF;
+
+    overflow: hidden;
+}
+
+
+/* Título */
+
+.crowna-ai-titulo h2 {
+    margin-top: 16px;
+
+    color: #11194D;
+
+    font-size: 38px;
+    line-height: 1.1;
+    font-weight: 700;
+
+    overflow-wrap: break-word;
+}
+
+
+/* Icono */
+
+.crowna-ai-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    height: 120px;
+}
+
+.crowna-ai-icono img {
+    display: block;
+
+    width: 120px;
+    height: 120px;
+
+    object-fit: contain;
+}
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+
+    .crowna-ai-icono {
+        width: 140px;
+        height: 140px;
+    }
+
+    .crowna-ai-icono img {
+        width: 140px;
+        height: 140px;
+    }
+
+}
+
+
+/* Texto */
+
+.crowna-ai-texto p {
+    margin: 0;
+
+    color: #4F5875;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* Link */
+
+.crowna-ai-link {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: #5638F5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: color 0.3s ease;
+}
+
+.crowna-ai-link:hover {
+    color: #4528D8;
+}
+
+
+/* Beneficios */
+
+.crowna-ai-beneficios {
+    width: 100%;
+}
+
+.beneficio-ai {
+    width: fit-content;
+
+    padding: 7px 12px;
+
+    color: #3F35A8;
+    background-color: #EDE9FF;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+
+/* Icono */
+
+.beneficio-ai-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    color: #5638F5;
+    background-color: #FFFFFF;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* Efecto hover */
+
+.beneficio-ai:hover {
+    background-color: #E3DDFF;
+
+    transform: translateX(3px);
+
+}
+
+/* =========================================================
+   CTA FINAL DE PRODUCTOS
+   ========================================================= */
+
+.cta-productos {
+    padding: 50px 20px;
+
+    background-color: #21164A;
+
+    overflow: hidden;
+}
+
+
+/* ETIQUETA */
+
+.cta-productos .etiqueta {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 7px 12px;
+
+    color: #5638F5;
+    background-color: #EDE9FF;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* TÍTULO */
+
+.cta-productos h2 {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+
+/* TEXTO */
+
+.cta-productos-texto p {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* BOTÓN */
+
+.cta-productos .boton-principal {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 13px 20px;
+
+    color: #FFFFFF;
+    background-color: #5638F5;
+
+    border: 1px solid #5638F5;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+
+/* HOVER */
+
+.cta-productos .boton-principal:hover {
+    color: #FFFFFF;
+
+    background-color: #4528D8;
+    border-color: #4528D8;
+
+    transform: translateY(-2px);
+}
+
+
+/* FOCUS */
+
+.cta-productos .boton-principal:focus {
+    color: #FFFFFF;
+
+    background-color: #4528D8;
+    border-color: #4528D8;
+
+    outline: none;
+
+    box-shadow: 0 0 0 3px #A99BFF;
+}
+
+
+/* ACTIVE */
+
+.cta-productos .boton-principal:active {
+    transform: translateY(0);
+}
+
+
+/* FRASE DECORATIVA */
+
+.cta-productos-decoracion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 120px;
+
+    background-color: transparent;
+
+    text-align: center;
+}
+
+
+.cta-productos-decoracion span {
+    color: #5638F5;
+
+    font-family: "Segoe Script", "Brush Script MT", cursive;
+
+    font-size: 24px;
+    line-height: 1.1;
+
+    font-style: italic;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   CTA - TABLET
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .cta-productos {
+        padding: 60px 35px;
+    }
+
+    .cta-productos h2 {
+        font-size: 40px;
+    }
+
+    .cta-productos-decoracion {
+        min-height: 140px;
+    }
+
+    .cta-productos-decoracion span {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   CTA - DESKTOP
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+    .cta-productos {
+        padding: 70px 60px;
+    }
+
+    .cta-productos h2 {
+        font-size: 44px;
+    }
+
+    .cta-productos-texto p {
+        font-size: 15px;
+    }
+
+    .cta-productos-decoracion {
+        min-height: 160px;
+    }
+
+    .cta-productos-decoracion span {
+        font-size: 32px;
+    }
+
+}
+
+/* =========================================================
+   PRODUCTOS - TABLET
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .hero-productos,
+    .soluciones-modulares,
+    .explora-modulos,
+    .crowna-ai,
+    .cta-productos {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+
+    /* Hero */
+
+    .hero-productos {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero-productos h1 {
+        font-size: 48px;
+    }
+
+
+    /* Soluciones */
+
+    .soluciones-modulares-intro h2 {
+        font-size: 46px;
+    }
+
+    .producto-card {
+        padding: 24px;
+    }
+
+
+    /* Carousel */
+
+    .explora-modulos-intro h2 {
+        font-size: 46px;
+    }
+
+    .modulo-info h3 {
+        font-size: 34px;
+    }
+
+
+    /* Crowna AI */
+
+    .crowna-ai-titulo h2 {
+        font-size: 42px;
+    }
+
+
+    /* CTA */
+
+    .cta-productos h2 {
+        font-size: 42px;
+    }
+
+}
+
+
+/* =========================================================
+   PRODUCTOS - ESCRITORIO
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+    .hero-productos,
+    .soluciones-modulares,
+    .explora-modulos,
+    .crowna-ai,
+    .cta-productos {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+
+    /* Hero */
+
+    .hero-productos {
+        min-height: 640px;
+
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero-productos h1 {
+        font-size: 54px;
+    }
+
+    .hero-productos-texto > p:not(.etiqueta) {
+        font-size: 17px;
+    }
+
+    .hero-productos-imagen img {
+        max-width: 650px;
+    }
+
+
+    /* Soluciones */
+
+    .soluciones-modulares {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .soluciones-modulares-intro h2 {
+        font-size: 48px;
+    }
+
+    .soluciones-modulares-descripcion {
+        font-size: 16px;
+    }
+
+    .producto-card {
+        padding: 25px;
+    }
+
+
+    /* Carousel */
+
+    .explora-modulos {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .explora-modulos-intro h2 {
+        font-size: 48px;
+    }
+
+    .modulo-slide {
+        min-height: 470px;
+    }
+
+    .modulo-info h3 {
+        font-size: 38px;
+    }
+
+    .modulo-info > p {
+        font-size: 16px;
+    }
+
+    .modulo-info ul {
+        font-size: 15px;
+    }
+
+
+    /* Crowna AI */
+
+    .crowna-ai {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .crowna-ai-titulo h2 {
+        font-size: 44px;
+    }
+
+
+    /* CTA */
+
+    .cta-productos {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .cta-productos h2 {
+        font-size: 44px;
+    }
+
 }
 
 /* =========================================================
