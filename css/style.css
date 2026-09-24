@@ -2777,18 +2777,19 @@ VISTA DE ESCRITORIO EN PLANES
    ========================================================= */
 
 
-/* Hero de Recursos */
+/* -------------------------
+   HERO DE RECURSOS
+   VISTA MÓVIL
+   ------------------------- */
 
 .hero-recursos {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px
-;
 
-    min-height: 640px;
-    padding: 35px 60px 35px;
+    gap: 25px;
+
+    padding: 35px 20px;
 
     background-image: url("../crowna_assets_png/21_recursosfondo_fondo.png");
     background-position: center top;
@@ -2797,45 +2798,46 @@ VISTA DE ESCRITORIO EN PLANES
 }
 
 
-/* Texto del Hero */
+/* Texto */
 
 .hero-recursos-texto {
-    width: 43%;
-
-    transform: translateY(-100px);
+    width: 100%;
 }
+
 
 /* Título */
 
 .hero-recursos h1 {
-    margin-top: 22px;
+    margin-top: 18px;
 
     color: #11194D;
 
-    font-size: 54px;
+    font-size: 36px;
     line-height: 1.08;
     font-weight: 700;
 }
 
+
 /* Descripción */
 
 .hero-recursos-texto > p:not(.etiqueta) {
-    margin-top: 22px;
+    margin-top: 18px;
 
     color: #4F5875;
 
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-/* Imagen del Hero */
+
+/* Imagen */
 
 .hero-recursos-imagen {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 52%;
+    width: 100%;
 }
 
 
@@ -2843,26 +2845,31 @@ VISTA DE ESCRITORIO EN PLANES
     display: block;
 
     width: 100%;
-    max-width: 650px;
+    max-width: 500px;
     height: auto;
 
     object-fit: contain;
 }
 
-/* Recursos*/
+
+/* -------------------------
+   RECURSOS
+   VISTA MÓVIL
+   ------------------------- */
 
 .recursos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+
     gap: 18px;
 
-    padding: 35px 60px 50px;
+    padding: 35px 20px 40px;
 
     background-color: #F4F4FF;
 }
 
 
-/* Título de la sección */
+/* Título */
 
 .recursos h2 {
     grid-column: 1 / -1;
@@ -2871,7 +2878,7 @@ VISTA DE ESCRITORIO EN PLANES
 
     color: #11194D;
 
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.2;
     font-weight: 700;
 }
@@ -2883,13 +2890,16 @@ VISTA DE ESCRITORIO EN PLANES
     display: flex;
     flex-direction: column;
 
-    padding: 25px;
+    height: 100%;
+
+    padding: 22px;
 
     background-color: #FFFFFF;
 
     border: 1px solid #E8E8F5;
     border-radius: 14px;
 }
+
 
 /* Título */
 
@@ -2898,10 +2908,11 @@ VISTA DE ESCRITORIO EN PLANES
 
     color: #11194D;
 
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.3;
     font-weight: 700;
 }
+
 
 /* Descripción */
 
@@ -2914,10 +2925,14 @@ VISTA DE ESCRITORIO EN PLANES
     line-height: 1.5;
 }
 
-/* Banner del final */
+
+/* -------------------------
+   BANNER FINAL
+   VISTA MÓVIL
+   ------------------------- */
 
 .banner-recursos {
-    padding: 0 60px 50px;
+    padding: 0 20px 40px;
 
     background-color: #F4F4FF;
 }
@@ -2925,10 +2940,12 @@ VISTA DE ESCRITORIO EN PLANES
 
 .banner-recursos article {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
 
-    padding: 25px 35px;
+    gap: 18px;
+
+    padding: 25px;
 
     background-color: #5638F5;
 
@@ -2936,7 +2953,7 @@ VISTA DE ESCRITORIO EN PLANES
 }
 
 
-/* Título del banner */
+/* Título */
 
 .banner-recursos h2 {
     color: #FFFFFF;
@@ -2947,7 +2964,7 @@ VISTA DE ESCRITORIO EN PLANES
 }
 
 
-/* Descripción del banner */
+/* Descripción */
 
 .banner-recursos p {
     margin-top: 5px;
@@ -2959,12 +2976,12 @@ VISTA DE ESCRITORIO EN PLANES
 }
 
 
-/* Botón del banner */
+/* Botón */
 
 .banner-recursos a {
     display: inline-block;
 
-    padding: 14px 22px;
+    padding: 12px 18px;
 
     color: #5638F5;
     background-color: #FFFFFF;
@@ -2973,13 +2990,195 @@ VISTA DE ESCRITORIO EN PLANES
 
     text-decoration: none;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
 }
 
 
 .banner-recursos a:hover {
+    color: #5638F5;
     background-color: #F0EDFF;
+}
+
+
+.banner-recursos a:focus {
+    color: #5638F5;
+    background-color: #F0EDFF;
+
+    outline: 2px solid #5638F5;
+    outline-offset: 2px;
+}
+
+
+.banner-recursos a:active {
+    color: #5638F5;
+    background-color: #E3DDFF;
+}
+
+
+/* -------------------------
+   TABLET
+   ------------------------- */
+
+@media (min-width: 768px) {
+
+    .hero-recursos {
+        padding: 50px 40px;
+    }
+
+
+    .hero-recursos h1 {
+        font-size: 44px;
+    }
+
+
+    .hero-recursos-texto > p:not(.etiqueta) {
+        font-size: 16px;
+    }
+
+
+    .recursos {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 45px 40px 50px;
+    }
+
+
+    .recursos h2 {
+        font-size: 32px;
+    }
+
+
+    .banner-recursos {
+        padding: 0 40px 50px;
+    }
+
+
+    .banner-recursos article {
+        padding: 30px;
+    }
+
+}
+
+
+/* -------------------------
+   ESCRITORIO
+   ------------------------- */
+
+@media (min-width: 1024px) {
+
+    /* Hero */
+
+    .hero-recursos {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 40px;
+
+        min-height: 640px;
+
+        padding: 35px 60px;
+    }
+
+
+    /* Texto */
+
+    .hero-recursos-texto {
+        width: 43%;
+
+        transform: translateY(-100px);
+    }
+
+
+    .hero-recursos h1 {
+        margin-top: 22px;
+
+        font-size: 54px;
+        line-height: 1.08;
+    }
+
+
+    .hero-recursos-texto > p:not(.etiqueta) {
+        margin-top: 22px;
+
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+
+    /* Imagen */
+
+    .hero-recursos-imagen {
+        width: 52%;
+    }
+
+
+    .hero-recursos-imagen img {
+        max-width: 650px;
+    }
+
+
+    /* Recursos */
+
+    .recursos {
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 18px;
+
+        padding: 35px 60px 50px;
+    }
+
+
+    .recursos h2 {
+        font-size: 30px;
+    }
+
+
+    /* Tarjetas */
+
+    .recurso-card {
+        padding: 25px;
+    }
+
+
+    /* Banner */
+
+    .banner-recursos {
+        padding: 0 60px 50px;
+    }
+
+
+    .banner-recursos article {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 25px 35px;
+    }
+
+
+    .banner-recursos h2 {
+        font-size: 24px;
+    }
+
+
+    .banner-recursos p {
+        font-size: 14px;
+    }
+
+
+    .banner-recursos a {
+        padding: 14px 22px;
+
+        font-size: 14px;
+
+        white-space: nowrap;
+    }
+
 }
 
 /* =========================================================
@@ -2987,15 +3186,19 @@ VISTA DE ESCRITORIO EN PLANES
    ========================================================= */
 
 
-/* Hero de Empresa */
+/* -------------------------
+   HERO DE EMPRESA
+   VISTA MÓVIL
+   ------------------------- */
 
 .hero-empresa {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 
-    min-height: 640px;
-    padding: 35px 60px 35px;
+    gap: 25px;
+
+    padding: 35px 20px;
 
     background-image: url("../crowna_assets_png/22_empresafondo_fondo.png");
     background-position: center top;
@@ -3007,20 +3210,18 @@ VISTA DE ESCRITORIO EN PLANES
 /* Texto */
 
 .hero-empresa-texto {
-    width: 48%;
-
-    transform: translateY(-40px);
+    width: 100%;
 }
 
 
 /* Título */
 
 .hero-empresa h1 {
-    margin-top: 22px;
+    margin-top: 18px;
 
     color: #11194D;
 
-    font-size: 48px;
+    font-size: 36px;
     line-height: 1.08;
     font-weight: 700;
 }
@@ -3029,19 +3230,19 @@ VISTA DE ESCRITORIO EN PLANES
 /* Descripción */
 
 .hero-empresa-texto > p:not(.etiqueta) {
-    margin-top: 22px;
+    margin-top: 18px;
 
     color: #4F5875;
 
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 
-/* Misión ,visión y valores */
+/* Misión, visión y valores */
 
 .empresa-info {
-    margin-top: 22px;
+    margin-top: 20px;
 }
 
 
@@ -3050,7 +3251,7 @@ VISTA DE ESCRITORIO EN PLANES
 
     color: #11194D;
 
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.3;
     font-weight: 700;
 }
@@ -3061,18 +3262,19 @@ VISTA DE ESCRITORIO EN PLANES
 
     color: #4F5875;
 
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
 }
 
-/* Imagen de Empresa */
+
+/* Imagen */
 
 .hero-empresa-imagen {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 48%;
+    width: 100%;
 }
 
 
@@ -3080,27 +3282,31 @@ VISTA DE ESCRITORIO EN PLANES
     display: block;
 
     width: 100%;
-    max-width: 560px;
+    max-width: 500px;
     height: auto;
 
     object-fit: contain;
 }
 
 
-/* Estadisticas */
+/* -------------------------
+   ESTADÍSTICAS
+   VISTA MÓVIL
+   ------------------------- */
 
 .estadisticas {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
     gap: 0;
 
-    margin: -35px 60px 50px;
-    padding: 25px;
+    margin: 0;
+    padding: 20px;
 
     background-color: #FFFFFF;
 
-    border: 1px solid #E8E8F5;
-    border-radius: 14px;
+    border: none;
+    border-radius: 0;
 
     position: relative;
     z-index: 2;
@@ -3110,18 +3316,28 @@ VISTA DE ESCRITORIO EN PLANES
 /* Cada estadística */
 
 .estadisticas article {
-    padding: 10px 25px;
+    padding: 20px 12px;
 
     text-align: center;
 
     border-right: 1px solid #E8E8F5;
+    border-bottom: 1px solid #E8E8F5;
 }
 
 
-/* El último no necesita separación */
+/* Quitar borde derecho en las columnas de la derecha */
 
-.estadisticas article:last-child {
+.estadisticas article:nth-child(2),
+.estadisticas article:nth-child(4) {
     border-right: none;
+}
+
+
+/* Quitar borde inferior en la fila inferior */
+
+.estadisticas article:nth-child(3),
+.estadisticas article:nth-child(4) {
+    border-bottom: none;
 }
 
 
@@ -3132,7 +3348,7 @@ VISTA DE ESCRITORIO EN PLANES
 
     color: #5638F5;
 
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.2;
     font-weight: 700;
 }
@@ -3145,24 +3361,211 @@ VISTA DE ESCRITORIO EN PLANES
 
     color: #4F5875;
 
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1.4;
 }
+
+
+/* -------------------------
+   TABLET
+   ------------------------- */
+
+@media (min-width: 768px) {
+
+    .hero-empresa {
+        padding: 50px 40px;
+    }
+
+
+    .hero-empresa h1 {
+        font-size: 44px;
+    }
+
+
+    .hero-empresa-texto > p:not(.etiqueta) {
+        font-size: 16px;
+    }
+
+
+    .empresa-info h3 {
+        font-size: 18px;
+    }
+
+
+    .empresa-info p {
+        font-size: 14px;
+    }
+
+
+    .hero-empresa-imagen img {
+        max-width: 550px;
+    }
+
+
+    .estadisticas {
+        padding: 25px 40px;
+    }
+
+
+    .estadisticas article {
+        padding: 20px;
+    }
+
+
+    .estadisticas h2 {
+        font-size: 30px;
+    }
+
+
+    .estadisticas p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* -------------------------
+   ESCRITORIO
+   ------------------------- */
+
+@media (min-width: 1024px) {
+
+    /* Hero */
+
+    .hero-empresa {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 40px;
+
+        min-height: 640px;
+
+        padding: 35px 60px;
+    }
+
+
+    /* Texto */
+
+    .hero-empresa-texto {
+        width: 48%;
+
+        transform: translateY(-40px);
+    }
+
+
+    .hero-empresa h1 {
+        margin-top: 22px;
+
+        font-size: 48px;
+        line-height: 1.08;
+    }
+
+
+    .hero-empresa-texto > p:not(.etiqueta) {
+        margin-top: 22px;
+
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+
+    /* Misión, visión y valores */
+
+    .empresa-info {
+        margin-top: 22px;
+    }
+
+
+    .empresa-info h3 {
+        font-size: 18px;
+    }
+
+
+    .empresa-info p {
+        font-size: 14px;
+    }
+
+
+    /* Imagen */
+
+    .hero-empresa-imagen {
+        width: 48%;
+    }
+
+
+    .hero-empresa-imagen img {
+        max-width: 560px;
+    }
+
+
+    /* Estadísticas */
+
+    .estadisticas {
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 0;
+
+        margin: -35px 60px 50px;
+        padding: 25px;
+
+        background-color: #FFFFFF;
+
+        border: 1px solid #E8E8F5;
+        border-radius: 14px;
+    }
+
+
+    .estadisticas article {
+        padding: 10px 25px;
+
+        border-right: 1px solid #E8E8F5;
+        border-bottom: none;
+    }
+
+
+    .estadisticas article:nth-child(2),
+    .estadisticas article:nth-child(4) {
+        border-right: 1px solid #E8E8F5;
+    }
+
+
+    .estadisticas article:last-child {
+        border-right: none;
+    }
+
+
+    .estadisticas h2 {
+        font-size: 30px;
+    }
+
+
+    .estadisticas p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+}
+
 
 /* =========================================================
    ESTILOS EXCLUSIVOS DE CONTACTO.HTML
    ========================================================= */
 
 
-/* Hero de Contacto */
+/* -------------------------
+   HERO DE CONTACTO
+   VISTA MÓVIL
+   ------------------------- */
 
 .hero-contacto {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 
-    min-height: 640px;
-    padding: 35px 60px 35px;
+    gap: 30px;
+
+    padding: 35px 20px;
 
     background-image: url("../crowna_assets_png/23_contactofondo.png");
     background-position: center top;
@@ -3171,23 +3574,23 @@ VISTA DE ESCRITORIO EN PLANES
 }
 
 
-/* Información de Contacto */
+/* -------------------------
+   INFORMACIÓN DE CONTACTO
+   ------------------------- */
 
 .hero-contacto-texto {
-    width: 40%;
-
-    transform: translateY(-30px);
+    width: 100%;
 }
 
 
 /* Título */
 
 .hero-contacto h1 {
-    margin-top: 22px;
+    margin-top: 18px;
 
     color: #11194D;
 
-    font-size: 48px;
+    font-size: 36px;
     line-height: 1.08;
     font-weight: 700;
 }
@@ -3196,19 +3599,19 @@ VISTA DE ESCRITORIO EN PLANES
 /* Descripción */
 
 .hero-contacto-texto > p:not(.etiqueta) {
-    margin-top: 22px;
+    margin-top: 18px;
 
     color: #4F5875;
 
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 
-/* Datos de contacto */
+/* Información */
 
 .contacto-info {
-    margin-top: 22px;
+    margin-top: 20px;
 }
 
 
@@ -3217,7 +3620,7 @@ VISTA DE ESCRITORIO EN PLANES
 
     color: #11194D;
 
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.3;
     font-weight: 700;
 }
@@ -3228,23 +3631,26 @@ VISTA DE ESCRITORIO EN PLANES
 
     color: #4F5875;
 
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
 }
 
 
-/* Formulario visual */
+/* -------------------------
+   FORMULARIO
+   VISTA MÓVIL
+   ------------------------- */
 
 .contacto-formulario {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 18px;
-    row-gap: 18px;
+    grid-template-columns: 1fr;
 
-    width: 48%;
+    gap: 14px;
+
+    width: 100%;
     max-width: 560px;
 
-    padding: 28px;
+    padding: 22px;
 
     background-color: #FFFFFF;
 
@@ -3253,7 +3659,7 @@ VISTA DE ESCRITORIO EN PLANES
 }
 
 
-/* Título del formulario */
+/* Título */
 
 .contacto-formulario h2 {
     grid-column: 1 / -1;
@@ -3271,7 +3677,9 @@ VISTA DE ESCRITORIO EN PLANES
 /* Campos */
 
 .campo {
-    padding: 17px;
+    width: 100%;
+
+    padding: 15px;
 
     color: #4F5875;
     background-color: #FFFFFF;
@@ -3279,25 +3687,18 @@ VISTA DE ESCRITORIO EN PLANES
     border: 1px solid #E8E8F5;
     border-radius: 8px;
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
-/* Campo que ocupa todo el ancho */
-
-.campo:nth-of-type(5) {
-    grid-column: 1 / -1;
-}
-
-
-/* Mensaje */
+/* Campo mensaje */
 
 .campo-mensaje {
     grid-column: 1 / -1;
 
-    min-height: 150px;
+    min-height: 130px;
 
-    padding: 17px;
+    padding: 15px;
 
     color: #4F5875;
     background-color: #FFFFFF;
@@ -3305,7 +3706,8 @@ VISTA DE ESCRITORIO EN PLANES
     border: 1px solid #E8E8F5;
     border-radius: 8px;
 
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 
@@ -3314,7 +3716,209 @@ VISTA DE ESCRITORIO EN PLANES
 .contacto-formulario .boton-principal {
     grid-column: 1 / -1;
 
-    margin-top: 0;
+    display: block;
+
+    padding: 13px 20px;
+
+    color: #FFFFFF;
+    background-color: #5638F5;
+
+    border: 1px solid #5638F5;
+    border-radius: 8px;
 
     text-align: center;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+
+/* Hover */
+
+.contacto-formulario .boton-principal:hover {
+    color: #FFFFFF;
+
+    background-color: #4528D8;
+    border-color: #4528D8;
+}
+
+
+/* Focus */
+
+.contacto-formulario .boton-principal:focus {
+    color: #FFFFFF;
+
+    background-color: #4528D8;
+    border-color: #4528D8;
+
+    outline: 2px solid #5638F5;
+    outline-offset: 2px;
+}
+
+
+/* Active */
+
+.contacto-formulario .boton-principal:active {
+    color: #FFFFFF;
+
+    background-color: #351FB5;
+    border-color: #351FB5;
+}
+
+
+/* -------------------------
+   TABLET
+   ------------------------- */
+
+@media (min-width: 768px) {
+
+    .hero-contacto {
+        padding: 50px 40px;
+    }
+
+
+    .hero-contacto h1 {
+        font-size: 44px;
+    }
+
+
+    .hero-contacto-texto > p:not(.etiqueta) {
+        font-size: 16px;
+    }
+
+
+    .contacto-info h3 {
+        font-size: 18px;
+    }
+
+
+    .contacto-info p {
+        font-size: 14px;
+    }
+
+
+    .contacto-formulario {
+        padding: 28px;
+
+        gap: 18px;
+    }
+
+
+    .campo {
+        padding: 17px;
+
+        font-size: 14px;
+    }
+
+
+    .campo-mensaje {
+        min-height: 150px;
+
+        padding: 17px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* -------------------------
+   ESCRITORIO
+   ------------------------- */
+
+@media (min-width: 1024px) {
+
+    /* Hero */
+
+    .hero-contacto {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 40px;
+
+        min-height: 640px;
+
+        padding: 35px 60px;
+    }
+
+
+    /* Información */
+
+    .hero-contacto-texto {
+        width: 40%;
+
+        transform: translateY(-30px);
+    }
+
+
+    .hero-contacto h1 {
+        margin-top: 22px;
+
+        font-size: 48px;
+        line-height: 1.08;
+    }
+
+
+    .hero-contacto-texto > p:not(.etiqueta) {
+        margin-top: 22px;
+
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+
+    .contacto-info {
+        margin-top: 22px;
+    }
+
+
+    .contacto-info h3 {
+        font-size: 18px;
+    }
+
+
+    .contacto-info p {
+        font-size: 14px;
+    }
+
+
+    /* Formulario */
+
+    .contacto-formulario {
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 18px;
+        row-gap: 18px;
+
+        width: 48%;
+        max-width: 560px;
+
+        padding: 28px;
+    }
+
+
+    .contacto-formulario h2 {
+        font-size: 22px;
+    }
+
+
+    .campo:nth-of-type(5) {
+        grid-column: 1 / -1;
+    }
+
+
+    .campo-mensaje {
+        grid-column: 1 / -1;
+    }
+
+
+    .contacto-formulario .boton-principal {
+        grid-column: 1 / -1;
+    }
+
 }
