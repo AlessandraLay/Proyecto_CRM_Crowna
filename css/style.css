@@ -2451,22 +2451,33 @@ footer p {
 
 
 /* -------------------------
-HERO DE PLANES (VISTA MÓVIL)
+HERO DE PLANES
 ------------------------- */
 
 .hero-planes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 25px;
-
     padding: 35px 20px;
 
     background-image: url("../crowna_assets_png/20_planesfondo_fondo.png");
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+/* Contenedor interno del Hero */
+
+.hero-planes-contenido {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
 }
 
 
@@ -2477,6 +2488,13 @@ HERO DE PLANES (VISTA MÓVIL)
 }
 
 
+/* Etiqueta */
+
+.hero-planes .etiqueta {
+    display: inline-block;
+}
+
+
 /* Título */
 
 .hero-planes h1 {
@@ -2484,7 +2502,7 @@ HERO DE PLANES (VISTA MÓVIL)
 
     color: #11194D;
 
-    font-size: 54px;
+    font-size: 42px;
     line-height: 1.08;
     font-weight: 700;
 }
@@ -2502,17 +2520,16 @@ HERO DE PLANES (VISTA MÓVIL)
 }
 
 
-/* Botón del Hero */
+/* Botón principal */
 
 .hero-planes .boton-principal {
     display: inline-block;
 
     margin-top: 30px;
-
     padding: 15px 24px;
 
-    background-color: #5638F5;
     color: #FFFFFF;
+    background-color: #5638F5;
 
     border-radius: 8px;
 
@@ -2520,13 +2537,49 @@ HERO DE PLANES (VISTA MÓVIL)
 
     font-size: 14px;
     font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
+
+
+/* Hover */
 
 .hero-planes .boton-principal:hover {
+    color: #FFFFFF;
     background-color: #4528D8;
+
+    box-shadow: 0 5px 15px rgba(86, 56, 245, 0.20);
+
+    transform: translateY(-2px);
 }
 
-/* Imagen del Hero */
+
+/* Focus */
+
+.hero-planes .boton-principal:focus {
+    color: #FFFFFF;
+    background-color: #4528D8;
+
+    box-shadow: 0 0 0 3px rgba(86, 56, 245, 0.15);
+}
+
+
+/* Active */
+
+.hero-planes .boton-principal:active {
+    color: #FFFFFF;
+    background-color: #351FB0;
+
+    transform: scale(0.97);
+}
+
+
+/* -------------------------
+IMAGEN DEL HERO
+------------------------- */
 
 .hero-planes-imagen {
     display: flex;
@@ -2536,6 +2589,7 @@ HERO DE PLANES (VISTA MÓVIL)
     width: 100%;
 }
 
+
 .hero-planes-imagen img {
     display: block;
 
@@ -2544,28 +2598,23 @@ HERO DE PLANES (VISTA MÓVIL)
     height: auto;
 
     object-fit: contain;
-} 
+}
 
-/* -------------------------
-PLANES (VISTA MÓVIL)
-------------------------- */
+
+/* =========================================================
+   SECCIÓN DE PLANES
+   ========================================================= */
 
 .planes {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
-
     padding: 35px 20px 50px;
 
     background-color: #F4F4FF;
 }
 
 
-/* Título de la sección */
+/* Título */
 
 .planes h2 {
-    grid-column: 1 / -1;
-
     margin: 0;
 
     color: #11194D;
@@ -2578,62 +2627,233 @@ PLANES (VISTA MÓVIL)
 }
 
 
-/* Periodicidad */
+/* =========================================================
+   PERIODICIDAD
+   ========================================================= */
 
 .planes .periodicidad {
-    grid-column: 1 / -1;
-
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    gap: 12px;
+    gap: 14px;
 
-    margin-top: -5px;
-    margin-bottom: 5px;
+    margin-top: 22px;
+    margin-bottom: 35px;
 }
 
+
+/* Mensual y Anual */
+
 .periodicidad span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 90px;
+
     padding: 10px 18px;
 
     color: #11194D;
     background-color: #FFFFFF;
 
     border: 1px solid #E8E8F5;
-    border-radius: 20px;
+    border-radius: 22px;
 
     font-size: 13px;
     font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
 }
 
-.periodicidad span:last-child {
+
+/* Hover Mensual / Anual */
+
+.periodicidad span:nth-child(1):hover,
+.periodicidad span:nth-child(2):hover {
+    color: #5638F5;
+
+    border-color: #5638F5;
+
+    box-shadow: 0 4px 14px rgba(86, 56, 245, 0.15);
+
+    transform: translateY(-2px);
+}
+
+
+/* Focus */
+
+.periodicidad span:nth-child(1):focus,
+.periodicidad span:nth-child(2):focus {
+    outline: none;
+
+    color: #5638F5;
+
+    border-color: #5638F5;
+
+    box-shadow: 0 0 0 3px rgba(86, 56, 245, 0.12);
+}
+
+
+/* Active */
+
+.periodicidad span:nth-child(1):active,
+.periodicidad span:nth-child(2):active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   AHORRA 30%
+   ========================================================= */
+
+.periodicidad span:nth-child(3) {
+    min-width: auto;
+
+    padding: 3px 6px;
+
     color: #5638F5;
     background-color: #EAE6FF;
 
-    border-color: #EAE6FF;
+    border: none;
+    border-radius: 6px;
+
+    font-size: 8px;
+    line-height: 1;
+    font-weight: 700;
+
+    cursor: default;
+
+    /* Pegada al botón Anual */
+    margin-left: -10px;
+
+    /* La subimos */
+    transform: translateY(-18px);
 }
 
 
-/* -------------------------
-TARJETAS (VISTA MÓVIL)
-------------------------- */
+/* No tiene hover */
+
+.periodicidad span:nth-child(3):hover {
+    color: #5638F5;
+
+    background-color: #EAE6FF;
+
+    box-shadow: none;
+
+    transform: translateY(-18px);
+}
+
+/* =========================================================
+   FILA DE TARJETAS
+   ========================================================= */
+
+/*
+Bootstrap controla la distribución:
+
+Móvil    → 1 tarjeta
+Tablet   → 2 tarjetas
+Desktop  → 4 tarjetas
+*/
+
+.planes .row {
+    align-items: stretch;
+
+    row-gap: 24px;
+}
 
 
-/* Tarjetas */
+/*
+Cada columna se convierte en flex.
+Esto permite que la tarjeta ocupe
+toda la altura disponible.
+*/
+
+.planes .row > [class*="col-"] {
+    display: flex;
+}
+
+
+/* =========================================================
+   TARJETAS DE PLANES
+   ========================================================= */
 
 .plan-card {
     display: flex;
     flex-direction: column;
 
+    height: 100%;
+    min-height: 500px;
+
     padding: 28px;
 
+    color: #11194D;
     background-color: #FFFFFF;
 
     border: 1px solid #E8E8F5;
     border-radius: 14px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
 
-/* Título del plan */
+
+/*
+Cuando la tarjeta está dentro de
+una columna Bootstrap ocupa todo
+el ancho de la columna.
+*/
+
+.planes .row > [class*="col-"] > .plan-card {
+    width: 100%;
+}
+
+
+/* -------------------------
+HOVER DE LA TARJETA
+------------------------- */
+
+.plan-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #5638F5;
+
+    box-shadow: 0 8px 25px rgba(86, 56, 245, 0.18);
+}
+
+
+/*
+La tarjeta destacada tampoco
+tiene borde morado por defecto.
+*/
+
+.plan-card.destacado {
+    border: 1px solid #E8E8F5;
+}
+
+
+/* Hover de Empresa */
+
+.plan-card.destacado:hover {
+    border-color: #5638F5;
+
+    box-shadow: 0 8px 28px rgba(86, 56, 245, 0.22);
+}
+
+
+/* -------------------------
+TÍTULO
+------------------------- */
 
 .plan-card h3 {
     margin: 0;
@@ -2646,7 +2866,9 @@ TARJETAS (VISTA MÓVIL)
 }
 
 
-/* Descripción del plan */
+/* -------------------------
+DESCRIPCIÓN
+------------------------- */
 
 .plan-card > p:not(.precio):not(.plan-popular) {
     margin-top: 10px;
@@ -2658,7 +2880,9 @@ TARJETAS (VISTA MÓVIL)
 }
 
 
-/* Precio */
+/* -------------------------
+PRECIO
+------------------------- */
 
 .plan-card .precio {
     margin-top: 22px;
@@ -2681,7 +2905,9 @@ TARJETAS (VISTA MÓVIL)
 }
 
 
-/* Lista */
+/* -------------------------
+LISTA
+------------------------- */
 
 .plan-card ul {
     margin-top: 22px;
@@ -2694,12 +2920,16 @@ TARJETAS (VISTA MÓVIL)
 }
 
 
-/* Botón del plan */
+/* =========================================================
+   BOTONES DE LAS TARJETAS
+   ========================================================= */
 
 .boton-plan {
     display: inline-block;
 
-    margin-top: 25px;
+    width: 100%;
+
+    margin-top: auto;
     padding: 13px 20px;
 
     color: #5638F5;
@@ -2713,22 +2943,52 @@ TARJETAS (VISTA MÓVIL)
 
     font-size: 14px;
     font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
 }
+
+
+/* Hover */
 
 .boton-plan:hover {
     color: #FFFFFF;
     background-color: #5638F5;
+
+    box-shadow: 0 5px 15px rgba(86, 56, 245, 0.18);
+
+    transform: translateY(-2px);
 }
 
 
-/* Plan destacado */
+/* Focus */
 
-.plan-card.destacado {
-    border: 2px solid #5638F5;
+.boton-plan:focus {
+    color: #5638F5;
+    background-color: #FFFFFF;
+
+    border-color: #5638F5;
+
+    box-shadow: 0 0 0 3px rgba(86, 56, 245, 0.15);
 }
 
 
-/* Etiqueta "Más popular" */
+/* Active */
+
+.boton-plan:active {
+    color: #FFFFFF;
+    background-color: #351FB0;
+
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   ETIQUETA MÁS POPULAR
+   ========================================================= */
 
 .plan-popular {
     align-self: flex-start;
@@ -2745,31 +3005,155 @@ TARJETAS (VISTA MÓVIL)
     font-weight: 700;
 }
 
-/* -------------------------
-VISTA DE ESCRITORIO EN PLANES
-------------------------- */
 
-@media (min-width: 1024px) {
-       .hero-planes {
-        flex-direction: row;
-        justify-content: space-between;
+/* =========================================================
+   MÓVIL
+   ========================================================= */
 
-        padding: 35px 60px;
+@media (max-width: 767px) {
+
+    .hero-planes {
+        padding: 30px 20px;
+    }
+
+    .hero-planes-contenido {
+        flex-direction: column;
+
+        gap: 25px;
     }
 
     .hero-planes-texto {
-        width: 43%;
-      }
+        width: 100%;
+    }
+
+    .hero-planes-imagen {
+        width: 100%;
+    }
+
+    .hero-planes h1 {
+        font-size: 42px;
+    }
+
+    .planes {
+        padding: 35px 20px 50px;
+    }
+
+    .plan-card {
+        min-height: 0;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    /* HERO */
+
+    .hero-planes {
+        padding: 35px 40px;
+    }
+
+    .hero-planes-contenido {
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 40px;
+    }
+
+    .hero-planes-texto {
+        width: 48%;
+    }
 
     .hero-planes-imagen {
         width: 52%;
     }
 
-    .planes {
-        grid-template-columns: repeat(4, 1fr);
+    .hero-planes h1 {
+        font-size: 48px;
+    }
 
+
+    /* PLANES */
+
+    .planes {
+        padding: 35px 40px 50px;
+    }
+
+
+    /* TARJETAS */
+
+    .plan-card {
+        min-height: 500px;
+    }
+
+}
+
+
+/* =========================================================
+   ESCRITORIO
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+    /* HERO */
+
+    .hero-planes {
+        padding: 35px 60px;
+    }
+
+    .hero-planes-contenido {
+        gap: 60px;
+    }
+
+    .hero-planes-texto {
+        width: 45%;
+    }
+
+    .hero-planes-imagen {
+        width: 55%;
+    }
+
+    .hero-planes h1 {
+        font-size: 54px;
+    }
+
+
+    /* PLANES */
+
+    .planes {
         padding: 35px 60px 50px;
     }
+
+
+    /* TARJETAS */
+
+    .plan-card {
+        min-height: 520px;
+    }
+
+}
+
+
+/* =========================================================
+   ESCRITORIO GRANDE
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .hero-planes-contenido {
+        gap: 70px;
+    }
+
+    .plan-card {
+        min-height: 520px;
+    }
+
 }
 
 /* =========================================================
