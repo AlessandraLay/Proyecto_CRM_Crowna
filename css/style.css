@@ -2756,26 +2756,12 @@ IMAGEN DEL HERO
    FILA DE TARJETAS
    ========================================================= */
 
-/*
-Bootstrap controla la distribución:
-
-Móvil    → 1 tarjeta
-Tablet   → 2 tarjetas
-Desktop  → 4 tarjetas
-*/
-
 .planes .row {
     align-items: stretch;
 
     row-gap: 24px;
 }
 
-
-/*
-Cada columna se convierte en flex.
-Esto permite que la tarjeta ocupe
-toda la altura disponible.
-*/
 
 .planes .row > [class*="col-"] {
     display: flex;
@@ -2807,13 +2793,6 @@ toda la altura disponible.
         border-color 0.25s ease;
 }
 
-
-/*
-Cuando la tarjeta está dentro de
-una columna Bootstrap ocupa todo
-el ancho de la columna.
-*/
-
 .planes .row > [class*="col-"] > .plan-card {
     width: 100%;
 }
@@ -2831,11 +2810,6 @@ HOVER DE LA TARJETA
     box-shadow: 0 8px 25px rgba(86, 56, 245, 0.18);
 }
 
-
-/*
-La tarjeta destacada tampoco
-tiene borde morado por defecto.
-*/
 
 .plan-card.destacado {
     border: 1px solid #E8E8F5;
@@ -3043,7 +3017,6 @@ LISTA
     }
 
 }
-
 
 /* =========================================================
    TABLET
