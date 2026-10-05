@@ -1,0 +1,19 @@
+@use "base/tipografia";
+@use "base/base";
+
+@use "components/buttons";
+@use "components/cards";
+
+@use "layout/header";
+@use "layout/footer";
+@use "layout/nav";
+
+@use "utilities/variables";
+@use "utilities/mixins";
+
+@use "pages/home";
+@use "pages/productos";
+@use "pages/planes";
+@use "pages/recursos";
+@use "pages/empresa";
+@use "pages/contacto";

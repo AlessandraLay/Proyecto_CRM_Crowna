@@ -1,0 +1,6 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.plan-card {
+    @include mixins.card-base;
+}

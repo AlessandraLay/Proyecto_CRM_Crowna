@@ -1,0 +1,23 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+/* BOTONES */
+
+.boton-principal {
+    @include mixins.button-effect(
+        variables.$color-primary,
+        variables.$color-white,
+        variables.$color-primary,
+        variables.$color-primary-hover
+    );
+}
+
+.boton-secundario {
+    @include mixins.button-effect(
+        variables.$color-white,
+        variables.$color-primary,
+        variables.$color-primary,
+        variables.$color-purple-hover,
+        variables.$color-primary
+    );
+}

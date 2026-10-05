@@ -1,0 +1,77 @@
+@use "variables";
+
+@mixin flex-center($direction: row, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin button-base(
+    $background: variables.$color-primary,
+    $color: variables.$color-white,
+    $border-color: variables.$color-primary
+) {
+    color: $color;
+    background-color: $background;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@mixin card-base {
+    background-color: variables.$color-white;
+    border: 1px solid variables.$color-border;
+    border-radius: 14px;
+}
+
+@mixin hero-spacing {
+    // Móvil
+    padding: 40px 20px 30px;
+
+    // Tablet
+    @media (min-width: 768px) {
+        padding: 50px 40px 40px;
+    }
+
+    // Escritorio
+    @media (min-width: 1024px) {
+        padding: 55px 70px 50px;
+    }
+}
+
+@mixin button-effect(
+    $background,
+    $color,
+    $border-color,
+    $hover-background,
+    $hover-color: $color
+) {
+    display: inline-block;
+    padding: 14px 24px;
+    color: $color;
+    background-color: $background;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    &:hover {
+        color: $hover-color;
+        background-color: $hover-background;
+        border-color: $hover-background;
+        transform: scale(1.04);
+        box-shadow: 0 6px 18px rgba(86, 56, 245, 0.25);
+    }
+}
