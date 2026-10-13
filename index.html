@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crowna CRM | Impulsa tu negocio</title>
+    <meta name="description" content="Descubre Crowna CRM, la plataforma para gestionar clientes, automatizar procesos y mejorar las relaciones con tus clientes desde un solo lugar.">
+    <meta name="keywords" content="Crowna CRM, software CRM, CRM para empresas, gestión de clientes, automatización de ventas, gestión comercial, marketing digital, experiencia del cliente">
 
     <!-- Google Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,9 +135,10 @@
                         </p>
 
                         <h1>
-                            Tu negocio,
+                            La plataforma de relacionamiento con clientes,
                             <br>
-                            en <span>control.</span>
+                            para tener tu negocio
+                            <br> en <span>control.</span>
                         </h1>
 
                         <p>
@@ -191,7 +194,7 @@
 
                         <img
                             src="crowna_assets_png/17_dashboard_sinfondo.png"
-                            alt="Dashboard de Crowna CRM"
+                            alt="Panel de control de Crowna CRM con información del negocio"
                         >
 
                     </article>
@@ -1099,12 +1102,20 @@
 
                         <form>
 
+                            <label class="visually-hidden" for="email-newsletter">
+                                Correo electrónico para el newsletter
+                            </label>
+
                             <input
                                 type="email"
+                                id="email-newsletter"
+                                name="email"
                                 placeholder="Tu correo electrónico"
+                                autocomplete="email"
+                                aria-label="Tu correo electrónico"
                             >
 
-                            <button type="submit">
+                            <button type="submit" aria-label="Suscribirse al newsletter">
                                 →
                             </button>
 
