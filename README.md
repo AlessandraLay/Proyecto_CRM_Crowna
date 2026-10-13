@@ -61,6 +61,14 @@ scss/
 - **pages:** estilos específicos de cada página.
 - **main.scss:** punto de entrada que importa los archivos parciales mediante `@use`.
 
+## SEO On-page y accesibilidad
+
+- Se incorporaron meta descriptions específicas para cada página.
+- Se definieron palabras clave relacionadas con el contenido de cada página.
+- Se optimizaron los atributos alt de las imágenes.
+- Se revisaron los títulos y encabezados para mejorar el SEO.
+
+
 ## Compilación de SCSS
 
 El archivo `scss/main.scss` se compila para generar `css/style.css`, utilizado por las páginas HTML.
