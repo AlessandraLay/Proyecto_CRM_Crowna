@@ -1,16 +1,21 @@
+// 1. Utilidades: variables y mixins
+@use "utilities/variables";
+@use "utilities/mixins";
+
+// 2. Estilos base
 @use "base/tipografia";
 @use "base/base";
 
-@use "components/buttons";
-@use "components/cards";
-
+// 3. Estructura general
 @use "layout/header";
 @use "layout/footer";
 @use "layout/nav";
 
-@use "utilities/variables";
-@use "utilities/mixins";
+// 4. Componentes reutilizables
+@use "components/buttons";
+@use "components/cards";
 
+// 5. Estilos específicos de cada página
 @use "pages/home";
 @use "pages/productos";
 @use "pages/planes";
