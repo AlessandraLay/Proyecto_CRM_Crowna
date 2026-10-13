@@ -10,12 +10,16 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- CSS AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- Hoja de estilos -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -789,9 +793,10 @@
                             <!-- GESTIÓN DE CLIENTES -->
 
                             <div class="col-12 col-md-6">
-
-                                <article class="funcionalidades-card-clientes_360">
-
+                                <div data-aos="flip-right">
+                                    
+                                    <article class="funcionalidades-card-clientes_360">
+                                    
                                     <img
                                         src="crowna_assets_png/icono_360.png"
                                         alt="Icono de gestión de clientes"
@@ -806,82 +811,85 @@
                                         organizada en un solo lugar.
                                     </p>
 
-                                </article>
+                                    </article>
 
+                                </div>
+                                
                             </div>
-
 
                             <!-- AUTOMATIZACIÓN -->
 
                             <div class="col-12 col-md-6">
+                                <div data-aos="flip-right">
+                                    <article class="funcionalidades-card-automatizacion">
 
-                                <article class="funcionalidades-card-automatizacion">
+                                        <img
+                                            src="crowna_assets_png/icono_automatizacion.png"
+                                            alt="Icono de automatización"
+                                        >
 
-                                    <img
-                                        src="crowna_assets_png/icono_automatizacion.png"
-                                        alt="Icono de automatización"
-                                    >
+                                        <h3>
+                                            Automatización
+                                        </h3>
 
-                                    <h3>
-                                        Automatización
-                                    </h3>
+                                        <p>
+                                            Ahorra tiempo automatizando tareas
+                                            y enfócate en lo que realmente importa.
+                                        </p>
 
-                                    <p>
-                                        Ahorra tiempo automatizando tareas
-                                        y enfócate en lo que realmente importa.
-                                    </p>
+                                    </article>
 
-                                </article>
+                                </div>
 
                             </div>
-
 
                             <!-- REPORTES -->
 
                             <div class="col-12 col-md-6">
+                                <div data-aos="flip-right">
+                                    <article class="funcionalidades-card-decisiones">
 
-                                <article class="funcionalidades-card-decisiones">
+                                        <img
+                                            src="crowna_assets_png/icono_decisiones.png"
+                                            alt="Icono de reportes y decisiones"
+                                        >
 
-                                    <img
-                                        src="crowna_assets_png/icono_decisiones.png"
-                                        alt="Icono de reportes y decisiones"
-                                    >
+                                        <h3>
+                                            Reportes en tiempo real
+                                        </h3>
 
-                                    <h3>
-                                        Reportes en tiempo real
-                                    </h3>
+                                        <p>
+                                            Analiza tus resultados y toma decisiones
+                                            basadas en información actualizada.
+                                        </p>
 
-                                    <p>
-                                        Analiza tus resultados y toma decisiones
-                                        basadas en información actualizada.
-                                    </p>
-
-                                </article>
+                                    </article>
+                                </div>
 
                             </div>
-
 
                             <!-- GESTIÓN DE CITAS -->
 
                             <div class="col-12 col-md-6">
+                                <div data-aos="flip-right">
+                                    <article class="funcionalidades-card-citas">
 
-                                <article class="funcionalidades-card-citas">
+                                        <img
+                                            src="crowna_assets_png/icono_citas.png"
+                                            alt="Icono de citas"
+                                        >
 
-                                    <img
-                                        src="crowna_assets_png/icono_citas.png"
-                                        alt="Icono de citas"
-                                    >
+                                        <h3>
+                                            Gestión de citas
+                                        </h3>
 
-                                    <h3>
-                                        Gestión de citas
-                                    </h3>
+                                        <p>
+                                            Organiza tus reservas, horarios y disponibilidad
+                                            para atender a tus clientes sin complicaciones.
+                                        </p>
 
-                                    <p>
-                                        Organiza tus reservas, horarios y disponibilidad
-                                        para atender a tus clientes sin complicaciones.
-                                    </p>
-
-                                </article>
+                                    </article>
+                                </div> 
 
                             </div>
 
@@ -1155,6 +1163,13 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
