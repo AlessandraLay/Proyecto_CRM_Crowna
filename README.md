@@ -44,41 +44,29 @@ Optimización básica de SEO on-page y accesibilidad.
 
 # Estructura del proyecto
 
-Proyecto_CRM_Crowna/
-├── index.html
-├── pages/
-│   ├── productos.html
-│   ├── planes.html
-│   ├── recursos.html
-│   ├── empresa.html
-│   └── contacto.html
-├── css/
-│   └── style.css
-├── scss/
-│   ├── main.scss
-│   ├── utilities/
-│   │   ├── _variables.scss
-│   │   ├── _mixins.scss
-│   │   └── _extend.scss
-│   ├── base/
-│   │   ├── _tipografia.scss
-│   │   └── _base.scss
-│   ├── layout/
-│   │   ├── _header.scss
-│   │   ├── _footer.scss
-│   │   └── _nav.scss
-│   ├── components/
-│   │   ├── _buttons.scss
-│   │   └── _cards.scss
-│   └── pages/
-│       ├── _home.scss
-│       ├── _productos.scss
-│       ├── _planes.scss
-│       ├── _recursos.scss
-│       ├── _empresa.scss
-│       └── _contacto.scss
-└── crowna_assets_png/
-    └── imágenes del proyecto
+scss/
+├── main.scss
+├── utilities/
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   └── _extend.scss
+├── base/
+│   ├── _tipografia.scss
+│   └── _base.scss
+├── layout/
+│   ├── _header.scss
+│   ├── _footer.scss
+│   └── _nav.scss
+├── components/
+│   ├── _buttons.scss
+│   └── _cards.scss
+└── pages/
+    ├── _home.scss
+    ├── _productos.scss
+    ├── _planes.scss
+    ├── _recursos.scss
+    ├── _empresa.scss
+    └── _contacto.scss
 
 
 # Arquitectura SCSS
