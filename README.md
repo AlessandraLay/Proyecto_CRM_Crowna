@@ -46,11 +46,12 @@ Optimización básica de SEO on-page y accesibilidad.
 
 Proyecto_CRM_Crowna/
 ├── index.html
-├── productos.html
-├── planes.html
-├── recursos.html
-├── empresa.html
-├── contacto.html
+├── pages/
+│   ├── productos.html
+│   ├── planes.html
+│   ├── recursos.html
+│   ├── empresa.html
+│   └── contacto.html
 ├── css/
 │   └── style.css
 ├── scss/
