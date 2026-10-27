@@ -122,7 +122,7 @@ Títulos y encabezados organizados para facilitar la comprensión del contenido.
 
 El archivo scss/main.scss se compila para generar css/style.css, utilizado por las páginas HTML.
 
-# # Compilar una vez
+# Compilar una vez
 
 sass scss/main.scss css/style.css
 
@@ -132,11 +132,10 @@ sass --watch scss/main.scss css/style.css
 
 Para detener la compilación automática, pulsa Ctrl + C en la terminal
 
-## Sitio web
+# Sitio web publicado
 
-[Visitar Crowna CRM](https://alessandralay.github.io/Proyecto_CRM_Crowna/)
+[Visitar Crowna CRM](https://crownacrm.netlify.app/)
 
-## Repositorio
+# Repositorio
 
 [Ver código fuente en GitHub](https://github.com/AlessandraLay/Proyecto_CRM_Crowna)
-
