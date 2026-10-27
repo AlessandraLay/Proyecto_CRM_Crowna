@@ -2,88 +2,135 @@
 
 Crowna CRM es una plataforma de gestión de relaciones con clientes diseñada para ayudar a las empresas a organizar, automatizar y mejorar la gestión de sus clientes.
 
-## Tecnologías utilizadas
+# Tecnologías utilizadas
 
-- HTML5
-- CSS3
-- SCSS (Sass)
-- Bootstrap 5
-- JavaScript
-- AOS (Animate On Scroll)
-- Git y GitHub
-- GitHub Pages
+HTML5
 
-## Características del proyecto
+CSS3
 
-- Diseño responsive adaptable a dispositivos móviles, tablets y escritorio.
-- Arquitectura SCSS modular para facilitar el mantenimiento y la reutilización de estilos.
-- Componentes reutilizables, como botones y tarjetas.
-- Transiciones CSS para mejorar la interacción con los botones.
-- Animaciones al desplazarse por la página mediante la librería AOS.
-- Navegación entre seis páginas: Inicio, Productos, Planes, Recursos, Empresa y Contacto.
+SCSS (Sass)
 
-## Arquitectura SCSS
+Bootstrap 5
+
+JavaScript
+
+AOS (Animate On Scroll)
+
+CSS Animations (@keyframes)
+
+Git y GitHub
+
+Netlify
+
+# Características del proyecto
+
+Diseño responsive adaptable a dispositivos móviles, tablets y escritorio.
+
+Navegación entre seis páginas: Inicio, Productos, Planes, Recursos, Empresa y Contacto.
+
+Arquitectura SCSS modular para facilitar el mantenimiento y la reutilización de estilos.
+
+Componentes reutilizables, como botones y tarjetas.
+
+Transiciones CSS para mejorar la interacción con los botones.
+
+Animaciones CSS mediante @keyframes.
+
+Animaciones al desplazarse por la página mediante AOS, donde está implementada.
+
+Componentes de Bootstrap 5 para facilitar el desarrollo de la interfaz.
+
+Optimización básica de SEO on-page y accesibilidad.
+
+# Estructura del proyecto
+
+Proyecto_CRM_Crowna/
+├── index.html
+├── productos.html
+├── planes.html
+├── recursos.html
+├── empresa.html
+├── contacto.html
+├── css/
+│   └── style.css
+├── scss/
+│   ├── main.scss
+│   ├── utilities/
+│   │   ├── _variables.scss
+│   │   ├── _mixins.scss
+│   │   └── _extend.scss
+│   ├── base/
+│   │   ├── _tipografia.scss
+│   │   └── _base.scss
+│   ├── layout/
+│   │   ├── _header.scss
+│   │   ├── _footer.scss
+│   │   └── _nav.scss
+│   ├── components/
+│   │   ├── _buttons.scss
+│   │   └── _cards.scss
+│   └── pages/
+│       ├── _home.scss
+│       ├── _productos.scss
+│       ├── _planes.scss
+│       ├── _recursos.scss
+│       ├── _empresa.scss
+│       └── _contacto.scss
+└── crowna_assets_png/
+    └── imágenes del proyecto
+
+
+# Arquitectura SCSS
 
 El proyecto utiliza una arquitectura modular para organizar los estilos y facilitar su mantenimiento y reutilización.
 
-```text
-scss/
-├── main.scss
-├── utilities/
-│   ├── _variables.scss
-│   ├── _mixins.scss
-│   └── _extend.scss
-├── base/
-│   ├── _tipografia.scss
-│   └── _base.scss
-├── layout/
-│   ├── _header.scss
-│   ├── _footer.scss
-│   └── _nav.scss
-├── components/
-│   ├── _buttons.scss
-│   └── _cards.scss
-└── pages/
-    ├── _home.scss
-    ├── _productos.scss
-    ├── _planes.scss
-    ├── _recursos.scss
-    ├── _empresa.scss
-    └── _contacto.scss
-```
+# Organización de los estilos
 
-### Organización de los estilos
+utilities: variables, mixins y extensiones reutilizables.
 
-- **utilities:** variables, mixins y extensiones reutilizables.
-- **base:** estilos generales y tipografía.
-- **layout:** encabezado, navegación y pie de página.
-- **components:** botones y tarjetas reutilizables.
-- **pages:** estilos específicos de cada página.
-- **main.scss:** punto de entrada que importa los archivos parciales mediante `@use`.
+base: estilos generales y tipografía.
 
-## SEO On-page y accesibilidad
+layout: encabezado, navegación y pie de página.
 
-- Se incorporaron meta descriptions específicas para cada página.
-- Se definieron palabras clave relacionadas con el contenido de cada página.
-- Se optimizaron los atributos alt de las imágenes.
-- Se revisaron los títulos y encabezados para mejorar el SEO.
+components: botones y tarjetas reutilizables.
 
+pages: estilos específicos de cada página.
 
-## Compilación de SCSS
+main.scss: punto de entrada que importa los archivos parciales mediante @use.
 
-El archivo `scss/main.scss` se compila para generar `css/style.css`, utilizado por las páginas HTML.
+# Animaciones y transiciones
 
-Para compilar una vez:
+El proyecto incorpora efectos visuales para mejorar la experiencia de navegación:
 
-```bash
+Transiciones CSS: suavizan los cambios visuales de los elementos interactivos, como los botones.
+
+@keyframes: permite definir animaciones personalizadas mediante estados iniciales y finales.
+
+AOS (Animate On Scroll): permite animar elementos al desplazarse por la página, en las secciones donde se encuentra implementado.
+
+# SEO on-page y accesibilidad
+
+Meta descriptions específicas para las páginas.
+
+Palabras clave relacionadas con el contenido de cada página.
+
+Atributos alt en las imágenes.
+
+Títulos y encabezados organizados para facilitar la comprensión del contenido.
+
+# Compilación de SCSS
+
+El archivo scss/main.scss se compila para generar css/style.css, utilizado por las páginas HTML.
+
+# # Compilar una vez
+
 sass scss/main.scss css/style.css
-```
 
-Para compilar automáticamente cada vez que se guarden cambios:
+# Compilar automáticamente al guardar cambios
 
-```bash
 sass --watch scss/main.scss css/style.css
-```
+
+Para detener la compilación automática, pulsa Ctrl + C en la terminal
 
 ## Sitio web
 
